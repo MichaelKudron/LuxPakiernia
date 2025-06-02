@@ -171,3 +171,155 @@ footer {
     font-size: 1rem;
   }
 }
+body.dark-mode {
+  --bg-main: #121212;
+  --bg-card: #1e1e1e;
+  --text-main: #f0f0f0;
+  --text-muted: #aaa;
+  --accent: #ff7043;
+  --accent-hover: #ff5722;
+  background-color: var(--bg-main);
+  color: var(--text-main);
+}
+
+body.dark-mode header {
+  background-color: var(--bg-card);
+  border-bottom: 1px solid #333;
+}
+
+body.dark-mode nav ul {
+  background-color: var(--bg-card);
+}
+
+body.dark-mode footer {
+  background-color: #1e1e1e;
+  color: #ccc;
+}
+header {
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  padding: 0.75rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+  gap: 1rem; /* Odstępy między elementami */
+}
+
+nav {
+  flex: 1;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+  justify-content: flex-end; /* wyrównanie na prawo */
+}
+
+.switch {
+  order: 1; /* upewnij się, że switch jest na początku */
+}
+
+.hamburger {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--accent);
+}
+/* Stylizacja ładnego switcha */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 28px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0;
+  right: 0; bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 28px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 22px;
+  width: 22px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: var(--accent);
+}
+
+input:checked + .slider:before {
+  transform: translateX(22px);
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 30px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0;
+  right: 0; bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 30px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "🌞"; /* domyślnie słońce */
+  height: 24px;
+  width: 24px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+}
+
+/* Kiedy checkbox jest zaznaczony - ciemny tryb */
+input:checked + .slider {
+  background-color: var(--accent);
+}
+
+input:checked + .slider:before {
+  transform: translateX(30px);
+  content: "🌙"; /* zmiana na księżyc */
+}

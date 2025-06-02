@@ -8,19 +8,30 @@
 </head>
 <body>
   <header>
-    <div class="logo">
-      <img id="logo" src="assets/logo.png">
-      <h3>LuxPakiernia</h3>
-    </div>
-    <nav id="navMenu">
-      <ul>
-        <li><a href="index.html">Strona główna</a></li>
-        <li><a href="login/login.html">Zaloguj się</a></li>
-        <li><a href="register/register.html">Zarejestruj się</a></li>
-      </ul>
-    </nav>
-    <button class="hamburger" id="hamburgerBtn" aria-label="Menu">&#9776;</button>
-  </header>
+  <div class="logo">
+    <img id="logo" src="assets/logo.png">
+    <h3>LuxPakiernia</h3>
+  </div>
+
+  <!-- 🌙 Ładny switch przed menu -->
+  <label class="switch">
+  <input type="checkbox" id="darkModeToggle">
+  <span class="slider"></span>
+</label>
+
+
+  <nav id="navMenu">
+    <ul>
+      <li><a href="index.html">Strona główna</a></li>
+      <li><a href="login/login.html">Zaloguj się</a></li>
+      <li><a href="register/register.html">Zarejestruj się</a></li>
+    </ul>
+  </nav>
+
+  <button class="hamburger" id="hamburgerBtn" aria-label="Menu">&#9776;</button>
+</header>
+
+
 
   <main>
     <section class="hero">
