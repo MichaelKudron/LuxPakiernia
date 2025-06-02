@@ -1,0 +1,167 @@
+/* ===== Reset & Global ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ===== Root Variables ===== */
+:root {
+  --bg-main: #f7f7f7;
+  --bg-card: #ffffff;
+  --text-main: #222;
+  --text-muted: #555;
+  --accent: #d32f2f;
+  --accent-hover: #b71c1c;
+  --radius: 8px;
+  --shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== Header ===== */
+header {
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  padding: 0.75rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+main {
+  flex: 1;
+  padding: 3rem 2rem;
+  display: grid;
+  gap: 3rem;
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+header h1 {
+  font-size: 1.25rem;
+  color: var(--accent);
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+nav a:hover {
+  color: var(--accent-hover);
+}
+
+
+
+/* ===== Hero Section ===== */
+.hero h2 {
+  font-size: clamp(1.8rem, 5vw, 2.5rem);
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  color: var(--text-muted);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.cta-button {
+  background-color: var(--accent);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: var(--radius);
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 1.5rem;
+  font-weight: bold;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.cta-button:hover {
+  background-color: var(--accent-hover);
+}
+
+
+/* ===== Features Section ===== */
+.features ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 900px;
+}
+
+.features li {
+  background-color: var(--bg-card);
+  padding: 1rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  list-style: none;
+}
+
+/* ===== Footer ===== */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #eee;
+  color: #444;
+  font-size: 0.9rem;
+  margin-top: 3rem;
+}
+
+/* ===== Media Queries ===== */
+
+/* Small devices (phones) */
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: flex-start;
+  }
+
+  .cta-button {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .hero h2 {
+    font-size: 1.8rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+}
+
+/* Medium devices (tablets) */
+@media (min-width: 601px) and (max-width: 1024px) {
+}
