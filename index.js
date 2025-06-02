@@ -1,7 +1,8 @@
-// Obsługa trybu ciemnego
 document.addEventListener("DOMContentLoaded", () => {
-  const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-  if (prefersDark) {
-    document.body.classList.add("dark-mode");
-  }
+  const btn = document.getElementById("hamburgerBtn");
+  const nav = document.getElementById("navMenu").querySelector("ul");
+
+  btn.addEventListener("click", () => {
+    nav.classList.toggle("active");
+  });
 });

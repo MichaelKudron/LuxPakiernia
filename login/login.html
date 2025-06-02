@@ -8,15 +8,19 @@
   <link rel="stylesheet" href="login.css" />
 </head>
 <body>
-  <header>
-    <h1>LuxPakiernia</h1>
-    <nav>
-      <ul>
-        <li><a href="../index.html">Strona główna</a></li>
-        <li><a href="../register/register.html">Zarejestruj się</a></li>
-      </ul>
-    </nav>
-  </header>
+ <header>
+  <div class="logo">LuxPakiernia</div>
+  <nav id="navMenu">
+    <ul>
+      <li><a href="../index.html">Strona główna</a></li>
+      <li><a href="../login/login.html">Zaloguj się</a></li>
+      <li><a href="../register/register.html">Zarejestruj się</a></li>
+    </ul>
+  </nav>
+  <button class="hamburger" id="hamburgerBtn" aria-label="Menu">&#9776;</button>
+</header>
+
+
 
   <main>
     <section class="login-box">
@@ -44,5 +48,7 @@
   </footer>
 
   <script src="login.js"></script>
+  <script src="../index.js"></script>
+
 </body>
 </html>
