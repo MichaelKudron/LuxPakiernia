@@ -8,7 +8,19 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\LuxPakiernia.Infrastructure.Application\LuxPakiernia.Infrastructure.Application.csproj" />
+    <ProjectReference Include="..\LuxPakiernia.Infrastructure.Application\LuxPakiernia.Application.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Services\" />
+  </ItemGroup>
+
+  <ItemGroup>
+	  <PackageReference Include="Microsoft.AspNet.Identity.EntityFramework" Version="2.2.4" />
+	  <PackageReference Include="EntityFramework" Version="6.4.4" />
+	  <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.5" />
+	  <PackageReference Include="Microsoft.Owin.Security.Jwt" Version="4.2.2" />
+	  <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="5.6.0" />
   </ItemGroup>
 
 </Project>

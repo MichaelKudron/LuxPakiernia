@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LuxPakiernia.Infrastructure
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LuxPakiernia.Infrastructure.Domain", "LuxPakiernia.Infrastructure.Domain\LuxPakiernia.Infrastructure.Domain.csproj", "{11654A1D-57F8-4216-A010-F92D75BD6033}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LuxPakiernia.Infrastructure.Application", "LuxPakiernia.Infrastructure.Application\LuxPakiernia.Infrastructure.Application.csproj", "{D08B1BD6-8FA9-445D-827E-65466D9801D1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LuxPakiernia.Application", "LuxPakiernia.Infrastructure.Application\LuxPakiernia.Application.csproj", "{D08B1BD6-8FA9-445D-827E-65466D9801D1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -3,12 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\kobry\\OneDrive\\Pulpit\\LuxPakiernia\\src\\LuxPakierna.Api\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D08B1BD6-8FA9-445D-827E-65466D9801D1}|LuxPakiernia.Infrastructure.Application\\LuxPakiernia.Infrastructure.Application.csproj|c:\\users\\kobry\\onedrive\\pulpit\\luxpakiernia\\src\\luxpakierna.api\\luxpakiernia.infrastructure.application\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D08B1BD6-8FA9-445D-827E-65466D9801D1}|LuxPakiernia.Infrastructure.Application\\LuxPakiernia.Infrastructure.Application.csproj|solutionrelative:luxpakiernia.infrastructure.application\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D08B1BD6-8FA9-445D-827E-65466D9801D1}|LuxPakiernia.Infrastructure.Application\\LuxPakiernia.Application.csproj|c:\\users\\kobry\\onedrive\\pulpit\\luxpakiernia\\src\\luxpakierna.api\\luxpakiernia.infrastructure.application\\models\\result.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D08B1BD6-8FA9-445D-827E-65466D9801D1}|LuxPakiernia.Infrastructure.Application\\LuxPakiernia.Application.csproj|solutionrelative:luxpakiernia.infrastructure.application\\models\\result.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{11654A1D-57F8-4216-A010-F92D75BD6033}|LuxPakiernia.Infrastructure.Domain\\LuxPakiernia.Infrastructure.Domain.csproj|c:\\users\\kobry\\onedrive\\pulpit\\luxpakiernia\\src\\luxpakierna.api\\luxpakiernia.infrastructure.domain\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{11654A1D-57F8-4216-A010-F92D75BD6033}|LuxPakiernia.Infrastructure.Domain\\LuxPakiernia.Infrastructure.Domain.csproj|solutionrelative:luxpakiernia.infrastructure.domain\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D08B1BD6-8FA9-445D-827E-65466D9801D1}|LuxPakiernia.Infrastructure.Application\\LuxPakiernia.Application.csproj|c:\\users\\kobry\\onedrive\\pulpit\\luxpakiernia\\src\\luxpakierna.api\\luxpakiernia.infrastructure.application\\luxpakiernia.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{D08B1BD6-8FA9-445D-827E-65466D9801D1}|LuxPakiernia.Infrastructure.Application\\LuxPakiernia.Application.csproj|solutionrelative:luxpakiernia.infrastructure.application\\luxpakiernia.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D08B1BD6-8FA9-445D-827E-65466D9801D1}|LuxPakiernia.Infrastructure.Application\\LuxPakiernia.Infrastructure.Application.csproj|c:\\users\\kobry\\onedrive\\pulpit\\luxpakiernia\\src\\luxpakierna.api\\luxpakiernia.infrastructure.application\\interfaces\\icurrentuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D08B1BD6-8FA9-445D-827E-65466D9801D1}|LuxPakiernia.Infrastructure.Application\\LuxPakiernia.Infrastructure.Application.csproj|solutionrelative:luxpakiernia.infrastructure.application\\interfaces\\icurrentuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D08B1BD6-8FA9-445D-827E-65466D9801D1}|LuxPakiernia.Infrastructure.Application\\LuxPakiernia.Infrastructure.Application.csproj|c:\\users\\kobry\\onedrive\\pulpit\\luxpakiernia\\src\\luxpakierna.api\\luxpakiernia.infrastructure.application\\interfaces\\itokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D08B1BD6-8FA9-445D-827E-65466D9801D1}|LuxPakiernia.Infrastructure.Application\\LuxPakiernia.Infrastructure.Application.csproj|solutionrelative:luxpakiernia.infrastructure.application\\interfaces\\itokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11654A1D-57F8-4216-A010-F92D75BD6033}|LuxPakiernia.Infrastructure.Domain\\LuxPakiernia.Infrastructure.Domain.csproj|c:\\users\\kobry\\onedrive\\pulpit\\luxpakiernia\\src\\luxpakierna.api\\luxpakiernia.infrastructure.domain\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11654A1D-57F8-4216-A010-F92D75BD6033}|LuxPakiernia.Infrastructure.Domain\\LuxPakiernia.Infrastructure.Domain.csproj|solutionrelative:luxpakiernia.infrastructure.domain\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11654A1D-57F8-4216-A010-F92D75BD6033}|LuxPakiernia.Infrastructure.Domain\\LuxPakiernia.Infrastructure.Domain.csproj|c:\\users\\kobry\\onedrive\\pulpit\\luxpakiernia\\src\\luxpakierna.api\\luxpakiernia.infrastructure.domain\\common\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11654A1D-57F8-4216-A010-F92D75BD6033}|LuxPakiernia.Infrastructure.Domain\\LuxPakiernia.Infrastructure.Domain.csproj|solutionrelative:luxpakiernia.infrastructure.domain\\common\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{45CD3CF3-1702-46ED-B108-D3AF3DDA4F95}|LuxPakiernia.Infrastructure\\LuxPakiernia.Infrastructure.csproj|c:\\users\\kobry\\onedrive\\pulpit\\luxpakiernia\\src\\luxpakierna.api\\luxpakiernia.infrastructure\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -22,45 +38,101 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\kobry\\OneDrive\\Pulpit\\LuxPakiernia\\src\\LuxPakierna.Api\\LuxPakiernia.Infrastructure.Application\\Program.cs",
-              "RelativeDocumentMoniker": "LuxPakiernia.Infrastructure.Application\\Program.cs",
-              "ToolTip": "C:\\Users\\kobry\\OneDrive\\Pulpit\\LuxPakiernia\\src\\LuxPakierna.Api\\LuxPakiernia.Infrastructure.Application\\Program.cs",
-              "RelativeToolTip": "LuxPakiernia.Infrastructure.Application\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAAAAAA",
+              "Title": "Result.cs",
+              "DocumentMoniker": "C:\\Users\\kobry\\OneDrive\\Pulpit\\LuxPakiernia\\src\\LuxPakierna.Api\\LuxPakiernia.Infrastructure.Application\\Models\\Result.cs",
+              "RelativeDocumentMoniker": "LuxPakiernia.Infrastructure.Application\\Models\\Result.cs",
+              "ToolTip": "C:\\Users\\kobry\\OneDrive\\Pulpit\\LuxPakiernia\\src\\LuxPakierna.Api\\LuxPakiernia.Infrastructure.Application\\Models\\Result.cs",
+              "RelativeToolTip": "LuxPakiernia.Infrastructure.Application\\Models\\Result.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T09:28:10.541Z",
+              "WhenOpened": "2025-06-03T10:16:27.036Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\kobry\\OneDrive\\Pulpit\\LuxPakiernia\\src\\LuxPakierna.Api\\LuxPakiernia.Infrastructure.Domain\\Program.cs",
-              "RelativeDocumentMoniker": "LuxPakiernia.Infrastructure.Domain\\Program.cs",
-              "ToolTip": "C:\\Users\\kobry\\OneDrive\\Pulpit\\LuxPakiernia\\src\\LuxPakierna.Api\\LuxPakiernia.Infrastructure.Domain\\Program.cs",
-              "RelativeToolTip": "LuxPakiernia.Infrastructure.Domain\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T09:27:37.871Z",
+              "Title": "LuxPakiernia.Application.csproj",
+              "DocumentMoniker": "C:\\Users\\kobry\\OneDrive\\Pulpit\\LuxPakiernia\\src\\LuxPakierna.Api\\LuxPakiernia.Infrastructure.Application\\LuxPakiernia.Application.csproj",
+              "RelativeDocumentMoniker": "LuxPakiernia.Infrastructure.Application\\LuxPakiernia.Application.csproj",
+              "ToolTip": "C:\\Users\\kobry\\OneDrive\\Pulpit\\LuxPakiernia\\src\\LuxPakierna.Api\\LuxPakiernia.Infrastructure.Application\\LuxPakiernia.Application.csproj",
+              "RelativeToolTip": "LuxPakiernia.Infrastructure.Application\\LuxPakiernia.Application.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-06-03T10:14:26.591Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "ICurrentUserService.cs",
+              "DocumentMoniker": "C:\\Users\\kobry\\OneDrive\\Pulpit\\LuxPakiernia\\src\\LuxPakierna.Api\\LuxPakiernia.Infrastructure.Application\\Interfaces\\ICurrentUserService.cs",
+              "RelativeDocumentMoniker": "LuxPakiernia.Infrastructure.Application\\Interfaces\\ICurrentUserService.cs",
+              "ToolTip": "C:\\Users\\kobry\\OneDrive\\Pulpit\\LuxPakiernia\\src\\LuxPakierna.Api\\LuxPakiernia.Infrastructure.Application\\Interfaces\\ICurrentUserService.cs",
+              "RelativeToolTip": "LuxPakiernia.Infrastructure.Application\\Interfaces\\ICurrentUserService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T10:13:37.527Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ITokenService.cs",
+              "DocumentMoniker": "C:\\Users\\kobry\\OneDrive\\Pulpit\\LuxPakiernia\\src\\LuxPakierna.Api\\LuxPakiernia.Infrastructure.Application\\Interfaces\\ITokenService.cs",
+              "RelativeDocumentMoniker": "LuxPakiernia.Infrastructure.Application\\Interfaces\\ITokenService.cs",
+              "ToolTip": "C:\\Users\\kobry\\OneDrive\\Pulpit\\LuxPakiernia\\src\\LuxPakierna.Api\\LuxPakiernia.Infrastructure.Application\\Interfaces\\ITokenService.cs*",
+              "RelativeToolTip": "LuxPakiernia.Infrastructure.Application\\Interfaces\\ITokenService.cs*",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T10:12:23.073Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "BaseEntity.cs",
+              "DocumentMoniker": "C:\\Users\\kobry\\OneDrive\\Pulpit\\LuxPakiernia\\src\\LuxPakierna.Api\\LuxPakiernia.Infrastructure.Domain\\Common\\BaseEntity.cs",
+              "RelativeDocumentMoniker": "LuxPakiernia.Infrastructure.Domain\\Common\\BaseEntity.cs",
+              "ToolTip": "C:\\Users\\kobry\\OneDrive\\Pulpit\\LuxPakiernia\\src\\LuxPakierna.Api\\LuxPakiernia.Infrastructure.Domain\\Common\\BaseEntity.cs",
+              "RelativeToolTip": "LuxPakiernia.Infrastructure.Domain\\Common\\BaseEntity.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T10:07:50.213Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\kobry\\OneDrive\\Pulpit\\LuxPakiernia\\src\\LuxPakierna.Api\\LuxPakiernia.Infrastructure.Domain\\Entities\\User.cs",
+              "RelativeDocumentMoniker": "LuxPakiernia.Infrastructure.Domain\\Entities\\User.cs",
+              "ToolTip": "C:\\Users\\kobry\\OneDrive\\Pulpit\\LuxPakiernia\\src\\LuxPakierna.Api\\LuxPakiernia.Infrastructure.Domain\\Entities\\User.cs",
+              "RelativeToolTip": "LuxPakiernia.Infrastructure.Domain\\Entities\\User.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T09:56:17.114Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\kobry\\OneDrive\\Pulpit\\LuxPakiernia\\src\\LuxPakierna.Api\\LuxPakiernia.Infrastructure\\Program.cs",
               "RelativeDocumentMoniker": "LuxPakiernia.Infrastructure\\Program.cs",

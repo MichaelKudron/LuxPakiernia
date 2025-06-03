@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LuxPakierna.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+192714ee25c624f2f75504fcfe26f4e0b712fc39")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d63982a8cd45a68794d326679d18ac0036b71e38")]
 [assembly: System.Reflection.AssemblyProductAttribute("LuxPakierna.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LuxPakierna.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

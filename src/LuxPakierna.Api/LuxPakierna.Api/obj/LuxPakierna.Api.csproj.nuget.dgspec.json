@@ -28,8 +28,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\kobry\\OneDrive\\Pulpit\\LuxPakiernia\\src\\LuxPakierna.Api\\LuxPakiernia.Infrastructure.Application\\LuxPakiernia.Infrastructure.Application.csproj": {
-                "projectPath": "C:\\Users\\kobry\\OneDrive\\Pulpit\\LuxPakiernia\\src\\LuxPakierna.Api\\LuxPakiernia.Infrastructure.Application\\LuxPakiernia.Infrastructure.Application.csproj"
+              "C:\\Users\\kobry\\OneDrive\\Pulpit\\LuxPakiernia\\src\\LuxPakierna.Api\\LuxPakiernia.Infrastructure.Application\\LuxPakiernia.Application.csproj": {
+                "projectPath": "C:\\Users\\kobry\\OneDrive\\Pulpit\\LuxPakiernia\\src\\LuxPakierna.Api\\LuxPakiernia.Infrastructure.Application\\LuxPakiernia.Application.csproj"
               }
             }
           }
@@ -77,12 +77,12 @@
         }
       }
     },
-    "C:\\Users\\kobry\\OneDrive\\Pulpit\\LuxPakiernia\\src\\LuxPakierna.Api\\LuxPakiernia.Infrastructure.Application\\LuxPakiernia.Infrastructure.Application.csproj": {
+    "C:\\Users\\kobry\\OneDrive\\Pulpit\\LuxPakiernia\\src\\LuxPakierna.Api\\LuxPakiernia.Infrastructure.Application\\LuxPakiernia.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kobry\\OneDrive\\Pulpit\\LuxPakiernia\\src\\LuxPakierna.Api\\LuxPakiernia.Infrastructure.Application\\LuxPakiernia.Infrastructure.Application.csproj",
-        "projectName": "LuxPakiernia.Infrastructure.Application",
-        "projectPath": "C:\\Users\\kobry\\OneDrive\\Pulpit\\LuxPakiernia\\src\\LuxPakierna.Api\\LuxPakiernia.Infrastructure.Application\\LuxPakiernia.Infrastructure.Application.csproj",
+        "projectUniqueName": "C:\\Users\\kobry\\OneDrive\\Pulpit\\LuxPakiernia\\src\\LuxPakierna.Api\\LuxPakiernia.Infrastructure.Application\\LuxPakiernia.Application.csproj",
+        "projectName": "LuxPakiernia.Application",
+        "projectPath": "C:\\Users\\kobry\\OneDrive\\Pulpit\\LuxPakiernia\\src\\LuxPakierna.Api\\LuxPakiernia.Infrastructure.Application\\LuxPakiernia.Application.csproj",
         "packagesPath": "C:\\Users\\kobry\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\kobry\\OneDrive\\Pulpit\\LuxPakiernia\\src\\LuxPakierna.Api\\LuxPakiernia.Infrastructure.Application\\obj\\",
         "projectStyle": "PackageReference",
@@ -121,6 +121,12 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "MediatR": {
+              "target": "Package",
+              "version": "[12.5.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -181,6 +187,12 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.Extensions.Identity.Stores": {
+              "target": "Package",
+              "version": "[9.0.5, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

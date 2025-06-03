@@ -11,7 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\LuxPakiernia.Infrastructure.Application\LuxPakiernia.Infrastructure.Application.csproj" />
+    <ProjectReference Include="..\LuxPakiernia.Infrastructure.Application\LuxPakiernia.Application.csproj" />
   </ItemGroup>
 
 </Project>
