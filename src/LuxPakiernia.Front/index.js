@@ -1,4 +1,23 @@
-// index.js
+// Funkcja inicjalizacji trybu ciemnego
+function initDarkMode() {
+  const darkModeToggle = document.getElementById("darkModeToggle");
+  const body = document.body;
+
+  // Sprawdź zapisany stan
+  if (localStorage.getItem("dark-mode") === "enabled") {
+    body.classList.add("dark-mode");
+    if (darkModeToggle) darkModeToggle.checked = true;
+  }
+
+  // Nasłuchuj zmian przełącznika
+  darkModeToggle?.addEventListener("change", () => {
+    body.classList.toggle("dark-mode");
+    localStorage.setItem("dark-mode", 
+      body.classList.contains("dark-mode") ? "enabled" : "disabled");
+  });
+}
+
+// Główna inicjalizacja po załadowaniu DOM
 document.addEventListener("DOMContentLoaded", () => {
   // Hamburger menu
   const btn = document.getElementById("hamburgerBtn");
@@ -8,20 +27,6 @@ document.addEventListener("DOMContentLoaded", () => {
     nav?.classList.toggle("active");
   });
 
-  // Tryb ciemny - przeniesione na początek
-  const darkModeToggle = document.getElementById("darkModeToggle");
-  const body = document.body;
-
-  if (localStorage.getItem("dark-mode") === "enabled") {
-    body.classList.add("dark-mode");
-    if (darkModeToggle) darkModeToggle.checked = true;
-  }
-
-  if (darkModeToggle) {
-    darkModeToggle.addEventListener("change", () => {
-      body.classList.toggle("dark-mode");
-      localStorage.setItem("dark-mode", 
-        body.classList.contains("dark-mode") ? "enabled" : "disabled");
-    });
-  }
+  // Inicjalizuj tryb ciemny
+  initDarkMode();
 });
