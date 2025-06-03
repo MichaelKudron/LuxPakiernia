@@ -1,65 +1,95 @@
 .bmi-calculator {
   background-color: var(--bg-card);
-  padding: 2rem;
+  padding: 2.5rem; /* Zwiększony padding */
   border-radius: var(--radius);
   box-shadow: var(--shadow);
-  max-width: 500px;
+  max-width: 550px; /* Zwiększona maksymalna szerokość */
   margin: 0 auto;
 }
 
 .bmi-calculator h2 {
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem; /* Większy margines */
   text-align: center;
+  color: var(--accent);
+  font-size: 1.8rem;
 }
 
 .form-group {
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem; /* Zwiększony margines */
 }
 
 .form-group label {
   display: block;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.8rem; /* Większy odstęp */
   font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--text-main);
 }
 
 .form-group input {
   width: 100%;
-  padding: 0.75rem;
-  border: 1px solid #ddd;
+  padding: 1rem; /* Większy padding */
+  border: 2px solid #ddd; /* Grubsza obramówka */
   border-radius: var(--radius);
-  font-size: 1rem;
+  font-size: 1.1rem;
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus {
+  border-color: var(--accent);
+  outline: none;
 }
 
 button[type="submit"] {
   width: 100%;
-  padding: 0.75rem;
+  padding: 1rem;
   background-color: var(--accent);
   color: white;
   border: none;
   border-radius: var(--radius);
-  font-size: 1rem;
+  font-size: 1.1rem;
+  font-weight: 600;
   cursor: pointer;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
+  transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+  background-color: var(--accent-hover);
 }
 
 .result-container {
-  margin-top: 2rem;
-  padding: 1rem;
+  margin-top: 2.5rem;
+  padding: 1.5rem;
   border-radius: var(--radius);
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-weight: bold;
+  background-color: rgba(211, 47, 47, 0.1);
 }
 
 .bmi-info {
-  margin-top: 2rem;
-  padding: 1rem;
+  margin-top: 2.5rem;
+  padding: 1.5rem;
   background-color: rgba(0,0,0,0.05);
   border-radius: var(--radius);
+  line-height: 1.6;
 }
 
 .bmi-info h3 {
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  color: var(--accent);
+  text-align: center;
+}
+
+.bmi-info ul {
+  padding-left: 1.5rem;
+  margin: 0;
+}
+
+.bmi-info li {
+  margin-bottom: 0.8rem;
+  list-style-type: disc; /* Lepiej widoczne punkty listy */
 }
 
 /* Dark mode styles */
@@ -71,4 +101,8 @@ body.dark-mode .form-group input {
   background-color: #333;
   color: #fff;
   border-color: #555;
+}
+
+body.dark-mode .result-container {
+  background-color: rgba(211, 47, 47, 0.2);
 }
