@@ -27,3 +27,4 @@ document.getElementById("registerForm").addEventListener("submit", function (e) 
   console.log("Rejestracja zakończona:", email);
   alert("Rejestracja zakończona sukcesem (symulacja).");
 });
+

@@ -1,0 +1,327 @@
+.dieta-hero {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.przepisy {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+.przepis-card {
+  background: var(--bg-card);
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.zapisz-przepis {
+  background: var(--accent);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius);
+  cursor: pointer;
+  margin-top: 1rem;
+}
+.dieta-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.dieta-box {
+  background-color: var(--bg-card);
+  padding: 2rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  margin-bottom: 2rem;
+}
+
+.meals-list {
+  background-color: var(--bg-card);
+  padding: 2rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.meals-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.meal-card {
+  background-color: var(--bg-main);
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  border: 1px solid #eee;
+  overflow-wrap: break-word;  
+  word-break: break-word;   
+  white-space: pre-wrap;
+  position: relative;
+  height: 220px; /* Stała wysokość */
+  perspective: 1000px;
+  cursor: pointer;
+  border-radius: var(--radius);
+  background: var(--bg-card);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.meal-card h4 {
+  margin: 0.5rem 0;
+  line-height: 1.5;
+}
+
+/* Dark mode styles */
+body.dark-mode .meal-card {
+  background-color: var(--bg-card);
+  border-color: #333;
+}
+
+body.dark-mode textarea,
+body.dark-mode input {
+  background-color: #333;
+  color: #fff;
+  border-color: #555;
+}
+button, .meal-btn {
+  background: var(--accent);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+button:hover, .meal-btn:hover {
+  background: var(--accent-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.delete-meal {
+  background: #f44336 !important;
+  margin-top: 10px;
+}
+/* Stały rozmiar pola składników */
+.ingredients-container {
+  margin-bottom: 1.5rem;
+}
+
+.textarea-wrapper {
+  position: relative;
+  border: 1px solid #ddd;
+  border-radius: var(--radius);
+  padding: 0;
+  background: var(--bg-card);
+}
+
+textarea#mealIngredients {
+  width: 100%;
+  min-height: 120px; /* Stała wysokość */
+  max-height: 120px; /* Maksymalna wysokość */
+  padding: 0.75rem;
+  border: none !important;
+  resize: none; /* Blokada zmiany rozmiaru */
+  font-family: inherit;
+  font-size: 1rem;
+  background: transparent;
+  box-shadow: none;
+  outline: none;
+}
+
+/* Dla trybu ciemnego */
+body.dark-mode .textarea-wrapper {
+  border-color: #555;
+}
+.textarea-wrapper {
+  margin-bottom: 0.5rem;
+}
+.meal-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* Styl karty przepisu 3D */
+.meal-card {
+  background-color: var(--bg-card, #fff);
+  border: 1px solid #ddd;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.meal-front, .meal-back {
+  position: absolute;
+  width: calc(100% - 4px); /* Kompensacja dla obramówki */
+  height: calc(100% - 4px);
+  left: 0;
+  top: 0;
+  padding: 1.5rem;
+  backface-visibility: hidden;
+  transition: transform 0.6s;
+  background: var(--bg-card);
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: var(--radius);
+}
+
+.meal-front {
+  transform: rotateY(0deg);
+}
+
+.meal-back {
+  transform: rotateY(180deg);
+  border: 2px solid var(--accent);
+  background: var(--bg-card);
+  margin: 2px; 
+}
+
+.meal-card:hover .meal-front {
+  transform: rotateY(180deg);
+}
+
+.meal-card:hover .meal-back {
+  transform: rotateY(360deg);
+}
+
+/* Styl makroskładników */
+.macros-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  text-align: center;
+  margin: -2px 0;
+}
+
+.macro-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5rem;
+  background: rgba(211, 47, 47, 0.05); /* Bardzo subtelne tło */
+}
+
+.macro-value {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: var(--accent); /* Kolor akcentu dla wartości */
+}
+
+.macro-label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-muted);
+  margin-top: 0.3rem;
+}
+
+/* Przycisk USUŃ */
+.delete-meal {
+  background: var(--accent);
+  color: white;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  border-radius: 20px;
+  margin-top: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.delete-meal:hover {
+  background: var(--accent-hover);
+  transform: translateY(-2px);
+}
+meal-card:hover .meal-front {
+  transform: rotateY(180deg) translateZ(1px); /* Delikatne wysunięcie */
+}
+.meal-card:hover .meal-back {
+  transform: rotateY(360deg) translateZ(1px);
+}
+.meals-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+/* Kontener formularza */
+.dieta-box {
+  background-color: var(--bg-card);
+  padding: 2rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.dieta-box h3 {
+  color: var(--accent);
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+/* Grupa formularza */
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--text-main);
+}
+
+/* Pola input */
+.form-group input[type="text"],
+.form-group textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: var(--radius);
+  font-size: 1rem;
+  background-color: var(--bg-card);
+  color: var(--text-main);
+  transition: border 0.3s;
+}
+
+.form-group input[type="text"]:focus,
+.form-group textarea:focus {
+  border-color: var(--accent);
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(211, 47, 47, 0.1);
+}
+
+/* Dark mode */
+body.dark-mode .form-group input[type="text"],
+body.dark-mode .form-group textarea {
+  border-color: #555;
+  background-color: #333;
+}
+
+body.dark-mode .form-group input[type="text"]:focus,
+body.dark-mode .form-group textarea:focus {
+  border-color: var(--accent);
+}
+
+
+
+
+

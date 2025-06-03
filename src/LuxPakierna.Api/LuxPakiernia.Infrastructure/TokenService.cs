@@ -1,4 +1,4 @@
-﻿using LuxPakiernia.Infrastructure.Application.Interfaces;
+﻿using LuxPakiernia.Application.Interfaces;
 using LuxPakiernia.Infrastructure.Domain.Entities;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;

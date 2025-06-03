@@ -413,4 +413,74 @@ input:checked + .slider:before {
   top: 25px;
   right: 100px;
 }
+.dieta-btn {
+  background: var(--accent);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  display: inline-block;
+  text-decoration: none !important; 
+  transition: background-color 0.3s;
+}
+
+.dieta-btn:hover {
+  background: var(--accent-hover);
+  text-decoration: none !important;
+}
+.features ul li {
+  list-style-type: none;
+  margin-bottom: 0.5rem;
+}
+/* Nowe style dla spójnej listy */
+.features-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 1rem;
+}
+
+.feature-item {
+  background: var(--bg-card);
+  padding: 1rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  transition: transform 0.3s;
+}
+
+.feature-item:hover {
+  transform: translateY(-3px);
+}
+
+.feature-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: var(--text-main);
+  text-decoration: none;
+}
+
+.feature-icon {
+  font-size: 1.5rem;
+}
+
+.diet-link {
+  display: block;
+  width: 100%;
+  color: inherit;
+  text-decoration: none !important;
+}
+
+/* Dla trybu ciemnego */
+body.dark-mode .feature-item {
+  background: var(--bg-card);
+  border: 1px solid #333;
+}
+.cta-button {
+  margin-bottom: 2rem;
+}
 

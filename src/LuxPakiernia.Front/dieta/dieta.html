@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zdrowie i dieta – LuxPakiernia</title>
+  <link rel="stylesheet" href="../index.css">
+  <link rel="stylesheet" href="dieta.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img id="logo" src="../assets/logo.png">
+      <h3>LuxPakiernia</h3>
+    </div>
+    <label class="switch">
+      <input type="checkbox" id="darkModeToggle">
+      <span class="slider"></span>
+    </label>
+    <nav id="navMenu">
+      <ul>
+        <li><a href="../index.html">Strona główna</a></li>
+        <li><a href="../login/login.html">Zaloguj się</a></li>
+        <li><a href="../register/register.html">Zarejestruj się</a></li>
+        <li><a href="../bmi/bmi.html">Kalkulator BMI</a></li> 
+      </ul>
+    </nav>
+    <button class="hamburger" id="hamburgerBtn" aria-label="Menu">&#9776;</button>
+  </header>
+
+  <main>
+    <section class="dieta-container">
+      <h2>Planer żywieniowy</h2>
+      
+      <div class="dieta-box">
+        <h3>Dodaj posiłek</h3>
+        <form id="mealForm">
+          <div class="form-group">
+            <label for="mealName">Nazwa posiłku</label>
+            <input type="text" id="mealName" required>
+          </div>
+          <div class="form-group ingredients-container">
+            <label for="mealIngredients">Składniki</label>
+            <div class="textarea-wrapper">
+              <textarea 
+                id="mealIngredients" 
+                rows="4" 
+                required
+                placeholder="Wpisz składniki oddzielone przecinkami..."
+              ></textarea>
+            </div>
+          </div>
+          <button type="submit">Zapisz posiłek</button>
+        </form>
+      </div>
+
+      <div class="meals-list">
+        <h3>Twoje posiłki</h3>
+        <div id="mealsContainer" class="meals-grid">
+            <div class="meal-back">
+              <div class="macros-grid">
+                <div class="macro-item">
+                  <span class="macro-value">33g</span>
+                  <span class="macro-label">węglowodany</span>
+                </div>
+                <div class="macro-item">
+                  <span class="macro-value">29g</span>
+                  <span class="macro-label">białko</span>
+                </div>
+                <div class="macro-item">
+                  <span class="macro-value">37g</span>
+                  <span class="macro-label">tłuszcze</span>
+                </div>
+              </div>
+              <button class="delete-meal">USUŃ</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Made by Michał Kobryń and Hubert Bobowik &copy; 2025 LuxPakiernia</p>
+  </footer>
+
+  <script src="../index.js"></script>
+  <script src="dieta.js"></script>
+</body>
+</html>

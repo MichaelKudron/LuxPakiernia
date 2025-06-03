@@ -1,5 +1,5 @@
-﻿using LuxPakiernia.Application.Models;
-using LuxPakiernia.Infrastructure.Application.Interfaces;
+﻿using LuxPakiernia.Application.Interfaces;
+using LuxPakiernia.Application.Models;
 using Microsoft.AspNetCore.Identity;
 
 namespace LuxPakiernia.Application.Auth.Register;

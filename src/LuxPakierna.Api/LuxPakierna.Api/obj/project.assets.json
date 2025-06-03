@@ -1208,19 +1208,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\kobry\\.nuget\\packages\\": {}
+    "C:\\Users\\bobow\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\kobry\\OneDrive\\Pulpit\\LuxPakiernia\\src\\LuxPakierna.Api\\LuxPakierna.Api\\LuxPakierna.Api.csproj",
+      "projectUniqueName": "C:\\Users\\bobow\\LuxPakiernia\\LuxPakiernia\\src\\LuxPakierna.Api\\LuxPakierna.Api\\LuxPakierna.Api.csproj",
       "projectName": "LuxPakierna.Api",
-      "projectPath": "C:\\Users\\kobry\\OneDrive\\Pulpit\\LuxPakiernia\\src\\LuxPakierna.Api\\LuxPakierna.Api\\LuxPakierna.Api.csproj",
-      "packagesPath": "C:\\Users\\kobry\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\kobry\\OneDrive\\Pulpit\\LuxPakiernia\\src\\LuxPakierna.Api\\LuxPakierna.Api\\obj\\",
+      "projectPath": "C:\\Users\\bobow\\LuxPakiernia\\LuxPakiernia\\src\\LuxPakierna.Api\\LuxPakierna.Api\\LuxPakierna.Api.csproj",
+      "packagesPath": "C:\\Users\\bobow\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\bobow\\LuxPakiernia\\LuxPakiernia\\src\\LuxPakierna.Api\\LuxPakierna.Api\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\kobry\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\bobow\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1228,14 +1233,20 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
+<<<<<<< HEAD
             "C:\\Users\\kobry\\OneDrive\\Pulpit\\LuxPakiernia\\src\\LuxPakierna.Api\\LuxPakiernia.Infrastructure.Application\\LuxPakiernia.Application.csproj": {
               "projectPath": "C:\\Users\\kobry\\OneDrive\\Pulpit\\LuxPakiernia\\src\\LuxPakierna.Api\\LuxPakiernia.Infrastructure.Application\\LuxPakiernia.Application.csproj"
+=======
+            "C:\\Users\\bobow\\LuxPakiernia\\LuxPakiernia\\src\\LuxPakierna.Api\\LuxPakiernia.Infrastructure.Application\\LuxPakiernia.Infrastructure.Application.csproj": {
+              "projectPath": "C:\\Users\\bobow\\LuxPakiernia\\LuxPakiernia\\src\\LuxPakierna.Api\\LuxPakiernia.Infrastructure.Application\\LuxPakiernia.Infrastructure.Application.csproj"
+>>>>>>> 4f444e9d24db99fd21f4ac461333442a3d7fd719
             }
           }
         }

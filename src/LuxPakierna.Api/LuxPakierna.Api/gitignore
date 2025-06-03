@@ -1,7 +1,10 @@
 ## Build results
 bin/
 obj/
-out/
+
+obj/
+*.cache
+*.log
 
 ## User-specific files
 *.user

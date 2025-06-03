@@ -1,9 +1,14 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "H5/ObPGHK+iL5QBf8DU3Td9B6ONZ49fkC+fjCtqfLSi6OO39waClvoxlcRPVYVc7Io7JTuEenNklU1grNxPmoQ==",
+=======
+  "dgSpecHash": "UR9wkp5Ne5kD+RUEEdQuHcg0KPaNtTeGF6oykEjAoGfFXdlvmSH+qOs82Y32vu2kp/tTsulC0RYBD2krcVlq/A==",
+>>>>>>> 4f444e9d24db99fd21f4ac461333442a3d7fd719
   "success": true,
-  "projectFilePath": "C:\\Users\\kobry\\OneDrive\\Pulpit\\LuxPakiernia\\src\\LuxPakierna.Api\\LuxPakierna.Api\\LuxPakierna.Api.csproj",
+  "projectFilePath": "C:\\Users\\bobow\\LuxPakiernia\\LuxPakiernia\\src\\LuxPakierna.Api\\LuxPakierna.Api\\LuxPakierna.Api.csproj",
   "expectedPackageFiles": [
+<<<<<<< HEAD
     "C:\\Users\\kobry\\.nuget\\packages\\mediatr\\12.5.0\\mediatr.12.5.0.nupkg.sha512",
     "C:\\Users\\kobry\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
     "C:\\Users\\kobry\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\9.0.5\\microsoft.aspnetcore.cryptography.internal.9.0.5.nupkg.sha512",
@@ -25,6 +30,14 @@
     "C:\\Users\\kobry\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.4.0\\swashbuckle.aspnetcore.swaggerui.6.4.0.nupkg.sha512",
     "C:\\Users\\kobry\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512",
     "C:\\Users\\kobry\\.nuget\\packages\\system.diagnostics.diagnosticsource\\9.0.5\\system.diagnostics.diagnosticsource.9.0.5.nupkg.sha512"
+=======
+    "C:\\Users\\bobow\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
+    "C:\\Users\\bobow\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\bobow\\.nuget\\packages\\swashbuckle.aspnetcore\\6.4.0\\swashbuckle.aspnetcore.6.4.0.nupkg.sha512",
+    "C:\\Users\\bobow\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.4.0\\swashbuckle.aspnetcore.swagger.6.4.0.nupkg.sha512",
+    "C:\\Users\\bobow\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.4.0\\swashbuckle.aspnetcore.swaggergen.6.4.0.nupkg.sha512",
+    "C:\\Users\\bobow\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.4.0\\swashbuckle.aspnetcore.swaggerui.6.4.0.nupkg.sha512"
+>>>>>>> 4f444e9d24db99fd21f4ac461333442a3d7fd719
   ],
   "logs": []
 }
