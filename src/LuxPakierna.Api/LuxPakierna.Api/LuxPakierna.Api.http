@@ -1,0 +1,6 @@
+@LuxPakierna.Api_HostAddress = http://localhost:5223
+
+GET {{LuxPakierna.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

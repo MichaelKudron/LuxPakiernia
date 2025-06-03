@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zaloguj się – LuxPakiernia</title>
+  <link rel="stylesheet" href="../index.css" />
+  <link rel="stylesheet" href="login.css" />
+</head>
+<body>
+ <header>
+  <div class="logo">LuxPakiernia</div>
+  <nav id="navMenu">
+    <ul>
+      <li><a href="../index.html">Strona główna</a></li>
+      <li><a href="../login/login.html">Zaloguj się</a></li>
+      <li><a href="../register/register.html">Zarejestruj się</a></li>
+    </ul>
+  </nav>
+  <button class="hamburger" id="hamburgerBtn" aria-label="Menu">&#9776;</button>
+</header>
+
+
+
+  <main>
+    <section class="login-box">
+      <h2>Zaloguj się</h2>
+      <form id="loginForm" novalidate>
+        <div class="form-group">
+          <label for="email">Adres e-mail</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+        <div class="form-group">
+          <label for="password">Hasło</label>
+          <input type="password" id="password" name="password" required minlength="6" />
+        </div>
+        <button type="submit">Zaloguj</button>
+        <p id="loginError" class="error-message"></p>
+      </form>
+      <div>Nie masz konta 
+        <a href="../register/register.html">Zarejestruj się</a>
+        </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Made by Michał Kobryń and Hubert Bobowik &copy; 2025 LuxPakiernia</p>
+  </footer>
+
+  <script src="login.js"></script>
+  <script src="../index.js"></script>
+
+</body>
+</html>

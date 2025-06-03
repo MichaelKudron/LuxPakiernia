@@ -1,0 +1,45 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\kobry\\OneDrive\\Pulpit\\LuxPakiernia\\src\\LuxPakiernia.Domain\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{106292E5-DFD8-44C5-8AE6-D9FBCF6FF2BA}|LuxPakiernia.Domain\\LuxPakiernia.Domain.csproj|c:\\users\\kobry\\onedrive\\pulpit\\luxpakiernia\\src\\luxpakiernia.domain\\luxpakiernia.domain\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{106292E5-DFD8-44C5-8AE6-D9FBCF6FF2BA}|LuxPakiernia.Domain\\LuxPakiernia.Domain.csproj|solutionrelative:luxpakiernia.domain\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\kobry\\OneDrive\\Pulpit\\LuxPakiernia\\src\\LuxPakiernia.Domain\\LuxPakiernia.Domain\\Program.cs",
+              "RelativeDocumentMoniker": "LuxPakiernia.Domain\\Program.cs",
+              "ToolTip": "C:\\Users\\kobry\\OneDrive\\Pulpit\\LuxPakiernia\\src\\LuxPakiernia.Domain\\LuxPakiernia.Domain\\Program.cs",
+              "RelativeToolTip": "LuxPakiernia.Domain\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T09:10:10.914Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

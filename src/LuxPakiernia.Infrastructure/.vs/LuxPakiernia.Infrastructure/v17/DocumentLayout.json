@@ -1,0 +1,45 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\kobry\\OneDrive\\Pulpit\\LuxPakiernia\\src\\LuxPakiernia.Infrastructure\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{CB25F747-115F-45A2-B86E-B0A223B12ACD}|LuxPakiernia.Infrastructure\\LuxPakiernia.Infrastructure.csproj|c:\\users\\kobry\\onedrive\\pulpit\\luxpakiernia\\src\\luxpakiernia.infrastructure\\luxpakiernia.infrastructure\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CB25F747-115F-45A2-B86E-B0A223B12ACD}|LuxPakiernia.Infrastructure\\LuxPakiernia.Infrastructure.csproj|solutionrelative:luxpakiernia.infrastructure\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\kobry\\OneDrive\\Pulpit\\LuxPakiernia\\src\\LuxPakiernia.Infrastructure\\LuxPakiernia.Infrastructure\\Program.cs",
+              "RelativeDocumentMoniker": "LuxPakiernia.Infrastructure\\Program.cs",
+              "ToolTip": "C:\\Users\\kobry\\OneDrive\\Pulpit\\LuxPakiernia\\src\\LuxPakiernia.Infrastructure\\LuxPakiernia.Infrastructure\\Program.cs",
+              "RelativeToolTip": "LuxPakiernia.Infrastructure\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T09:10:47.136Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

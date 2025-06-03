@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34728.123
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LuxPakierna.Api", "LuxPakierna.Api\LuxPakierna.Api.csproj", "{EA3DC48F-F62B-4011-BC27-CE5E6F7E5687}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EA3DC48F-F62B-4011-BC27-CE5E6F7E5687}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA3DC48F-F62B-4011-BC27-CE5E6F7E5687}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA3DC48F-F62B-4011-BC27-CE5E6F7E5687}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA3DC48F-F62B-4011-BC27-CE5E6F7E5687}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C51004B0-2385-418F-BB22-E8E6C6140D7C}
+	EndGlobalSection
+EndGlobal
