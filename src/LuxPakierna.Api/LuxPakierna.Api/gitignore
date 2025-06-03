@@ -1,0 +1,82 @@
+## Build results
+bin/
+obj/
+out/
+
+## User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+## ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+## VS Code
+.vscode/
+*.code-workspace
+
+## Visual Studio
+.vs/
+*.dbmdl
+*.dbproj.schemaview
+*.pfx
+*.publish.xml
+*.sql
+*.cache
+*.bak
+*.log
+
+## IIS / Kestrel
+*.vspscc
+*.vssscc
+*.ncb
+*.aps
+*.pidb
+*.svclog
+*.scc
+*.DotSettings.user
+
+## Configuration files
+appsettings.*.json
+secrets.json
+
+## Environment
+.env
+.env.*
+
+## Rider
+.idea/
+*.sln.iml
+
+## NuGet
+*.nupkg
+*.snupkg
+.nuget/
+packages/
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+## Logs
+*.log
+logs/
+log/
+
+## Test results
+TestResults/
+*.coverage
+*.coveragexml
+*.testresults
+
+## Others
+_ReSharper*/
+*.resharper
+*.DotSettings
+
+# Node.js (jeśli używasz np. Webpacka, Vue, React w projekcie)
+node_modules/
+dist/
+npm-debug.log*
+yarn-error.log*
+pnpm-debug.log*
