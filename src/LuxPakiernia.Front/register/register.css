@@ -52,3 +52,12 @@ button[type="submit"]:hover {
   font-size: 0.9rem;
   margin-top: 1rem;
 }
+.slider:before {
+  content: "🌞";
+  ...
+}
+
+input:checked + .slider:before {
+  content: "🌙";
+}
+

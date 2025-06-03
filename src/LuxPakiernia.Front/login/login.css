@@ -52,3 +52,48 @@ button[type="submit"]:hover {
   font-size: 0.9rem;
   margin-top: 1rem;
 }
+.slider:before {
+  content: "🌞";
+  ...
+}
+
+input:checked + .slider:before {
+  content: "🌙";
+}
+body.dark-mode {
+  background-color: #121212;
+  color: #f0f0f0;
+}
+
+body.dark-mode header {
+  background-color: #1e1e1e;
+}
+
+body.dark-mode .features li {
+  background-color: #222;
+  color: #ddd;
+}
+body.dark-mode {
+  background-color: #121212;
+  color: #f0f0f0;
+}
+
+body.dark-mode header {
+  background-color: #1e1e1e;
+}
+
+body.dark-mode input,
+body.dark-mode textarea {
+  background-color: #1e1e1e;
+  color: #fff;
+  border: 1px solid #555;
+}
+
+body.dark-mode .form-container {
+  background-color: #1c1c1c;
+  color: #fff;
+}
+body.dark-mode {
+  background-color: #121212;
+  color: white;
+}
