@@ -26,11 +26,27 @@
 }
 
 .progress-card {
-  background-color: var(--bg-main);
+  background: var(--bg-card);
   padding: 1.5rem;
   border-radius: var(--radius);
   box-shadow: var(--shadow);
-  border: 1px solid #eee;
+  margin-bottom: 1.5rem;
+  border-left: 4px solid var(--accent);
+}
+.progress-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.progress-date {
+  font-weight: bold;
+  color: var(--accent);
+}
+.progress-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
 }
 
 .progress-card h4 {
@@ -50,8 +66,15 @@
 .stat-item {
   display: flex;
   justify-content: space-between;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #eee;
 }
-
+.stat-label {
+  font-weight: 600;
+}
+.stat-value {
+  color: var(--accent);
+}
 .form-row {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -72,4 +95,48 @@ body.dark-mode input {
   background-color: #333;
   color: #fff;
   border-color: #555;
+}
+.delete-progress {
+  background-color: #E65100;
+  color: white;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  border-radius: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-top: 0.5rem;
+}
+.delete-progress:hover {
+  background-color: #FF8A00;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.save-btn {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  background-color: #E65100; /* Pomarańczowy */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(255, 109, 0, 0.3);
+  margin-top: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.save-btn:hover {
+  background-color: #FF8A00; /* Jaśniejszy pomarańcz */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 109, 0, 0.4);
+}
+
+.save-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(255, 109, 0, 0.3);
 }
