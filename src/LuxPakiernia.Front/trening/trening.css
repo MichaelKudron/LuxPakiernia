@@ -1,6 +1,6 @@
 /* Spójne style z resztą aplikacji */
 .trening-container {
-  max-width: 1200px;
+  max-width: 600px;
   margin: 0 auto;
   padding: 2rem;
 }
@@ -49,6 +49,10 @@
   display: block;
   font-weight: 600;
   margin-bottom: 0.5rem;
+  color: var(--accent);
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
 }
 
 .form-group input,
@@ -84,3 +88,42 @@ body.dark-mode input {
   color: #fff;
   border-color: #555;
 }
+#trainingName {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: var(--radius);
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+.exercises-container {
+  border: 1px solid #ddd;
+  border-radius: var(--radius);
+  padding: 0;
+  margin-bottom: 1.5rem;
+  background: var(--bg-card);
+}
+#trainingExercises {
+  width: 100%;
+  min-height: 120px;
+  max-height: 120px;
+  padding: 0.8rem;
+  border: none;
+  font-family: inherit;
+  font-size: 1rem;
+  resize: none;
+  background: transparent;
+}
+.delete-training {
+  background: var(--accent);
+  color: white;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  border-radius: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: all 0.3s;
+  display: inline-block;
+}
+
