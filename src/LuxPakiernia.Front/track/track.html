@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Śledzenie postępów – LuxPakiernia</title>
+  <link rel="stylesheet" href="../index.css">
+  <link rel="stylesheet" href="track.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img id="logo" src="../assets/logo.png">
+      <h3>LuxPakiernia</h3>
+    </div>
+    <label class="switch">
+      <input type="checkbox" id="darkModeToggle">
+      <span class="slider"></span>
+    </label>
+    <nav id="navMenu">
+      <ul>
+        <li><a href="../index.html">Strona główna</a></li>
+        <li><a href="../login/login.html">Zaloguj się</a></li>
+        <li><a href="../register/register.html">Zarejestruj się</a></li>
+        <li><a href="../bmi/bmi.html">Kalkulator BMI</a></li>
+      </ul>
+    </nav>
+    <button class="hamburger" id="hamburgerBtn" aria-label="Menu">&#9776;</button>
+  </header>
+
+  <main>
+    <section class="track-container">
+      <h2>Śledź swoje postępy</h2>
+      
+      <div class="track-box">
+        <h3>Dodaj nowy pomiar</h3>
+        <form id="progressForm">
+          <div class="form-group">
+            <label for="measurementDate">Data</label>
+            <input type="date" id="measurementDate" required>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="weight">Waga (kg)</label>
+              <input type="number" id="weight" step="0.1" required>
+            </div>
+            <div class="form-group">
+              <label for="muscleMass">Masa mięśniowa (kg)</label>
+              <input type="number" id="muscleMass" step="0.1">
+            </div>
+          </div>
+          <button type="submit" class="submit-btn">ZAPISZ POMIAR</button>
+        </form>
+      </div>
+
+      <div class="progress-list">
+        <h3>Historia pomiarów</h3>
+        <div id="progressContainer" class="progress-grid"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Made by Michał Kobryń and Hubert Bobowik &copy; 2025 LuxPakiernia</p>
+  </footer>
+
+  <script src="../index.js"></script>
+  <script src="track.js"></script>
+</body>
+</html>

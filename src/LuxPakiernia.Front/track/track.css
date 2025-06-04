@@ -1,0 +1,75 @@
+.track-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.track-box {
+  background-color: var(--bg-card);
+  padding: 2rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  margin-bottom: 2rem;
+}
+
+.progress-list {
+  background-color: var(--bg-card);
+  padding: 2rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.progress-grid {
+  display: grid;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.progress-card {
+  background-color: var(--bg-main);
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  border: 1px solid #eee;
+}
+
+.progress-card h4 {
+  margin-top: 0;
+  color: var(--accent);
+  border-bottom: 1px solid #eee;
+  padding-bottom: 0.5rem;
+}
+
+.progress-stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.stat-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+/* Dark mode styles */
+body.dark-mode .progress-card {
+  background-color: var(--bg-card);
+  border-color: #333;
+}
+
+body.dark-mode .progress-card h4 {
+  border-color: #444;
+}
+
+body.dark-mode input {
+  background-color: #333;
+  color: #fff;
+  border-color: #555;
+}
