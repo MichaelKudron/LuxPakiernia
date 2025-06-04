@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Plany treningowe – LuxPakiernia</title>
+  <title>Ćwiczenia – LuxPakiernia</title>
   <link rel="stylesheet" href="../index.css">
   <link rel="stylesheet" href="trening.css">
 </head>
@@ -29,29 +29,29 @@
   </header>
 
   <main>
-    <section class="trening-container">
-      <h2>Twórz plany treningowe</h2>
-      
-      <div class="trening-box">
-        <h3>Dodaj nowy trening</h3>
-        <form id="trainingForm">
-          <div class="form-group">
-            <label for="trainingName">Nazwa treningu</label>
-            <input type="text" id="trainingName" required>
-          </div>
-          <div class="form-group">
-            <label for="trainingExercises">Ćwiczenia</label>
-            <textarea id="trainingExercises" placeholder="Wpisz ćwiczenia oddzielone przecinkami..." required></textarea>
-          </div>
-          <button type="submit" class="submit-btn">ZAPISZ TRENING</button>
-        </form>
-      </div>
+   <section class="exercises-container">
+  <div class="exercises-header">
+  <h1>Ćwiczenia</h1>
+  <p>Wybierz grupę mięśni, którą chcesz trenować 💥</p>
+</div>
 
-      <div class="trainings-list">
-        <h3>Twoje plany treningowe</h3>
-        <div id="trainingsContainer" class="trainings-grid"></div>
-      </div>
-    </section>
+  <div style="display: flex; flex-wrap: wrap; gap: 2rem;">
+    <aside class="filter-panel">
+  <h3>Kategorie 🏋️‍♂️ </h3>
+  <label><input type="checkbox" value="Ramiona" class="filter-checkbox"> Ramiona</label>
+  <label><input type="checkbox" value="Klatka piersiowa" class="filter-checkbox"> Klatka piersiowa</label>
+  <label><input type="checkbox" value="Plecy" class="filter-checkbox"> Plecy</label>
+  <label><input type="checkbox" value="Nogi" class="filter-checkbox"> Nogi</label>
+  <label><input type="checkbox" value="Brzuch" class="filter-checkbox"> Brzuch</label>
+</aside>
+
+
+    <div class="exercises-list" style="flex: 1;">
+      <!-- Ćwiczenia będą dodawane dynamicznie przez JS -->
+    </div>
+  </div>
+</section>
+
   </main>
 
   <footer>
@@ -60,5 +60,6 @@
 
   <script src="../index.js"></script>
   <script src="trening.js"></script>
+  
 </body>
 </html>

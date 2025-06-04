@@ -1,129 +1,195 @@
 /* Spójne style z resztą aplikacji */
-.trening-container {
-  max-width: 600px;
+.exercises-container {
+  max-width: 800px;
   margin: 0 auto;
   padding: 2rem;
 }
 
-.trening-box {
-  background-color: var(--bg-card);
-  padding: 2rem;
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  margin-bottom: 2rem;
-}
-
-.trainings-list {
-  background-color: var(--bg-card);
-  padding: 2rem;
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-}
-
-.trainings-grid {
+.exercises-list {
+  margin-top: 2rem;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 1.5rem;
-  margin-top: 1.5rem;
 }
 
-.training-card {
-  background-color: var(--bg-main);
+.exercise-card {
+  background-color: var(--bg-card);
   padding: 1.5rem;
   border-radius: var(--radius);
   box-shadow: var(--shadow);
-  border: 1px solid #eee;
+  transition: transform 0.3s ease;
 }
 
-.training-card h4 {
+.exercise-card:hover {
+  transform: translateY(-5px);
+}
+
+.exercise-card h3 {
   margin-top: 0;
   color: var(--accent);
+  font-size: 1.4rem;
 }
 
-/* Style formularza */
-.form-group {
-  margin-bottom: 1.5rem;
-}
-
-.form-group label {
-  display: block;
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-  color: var(--accent);
-  text-transform: uppercase;
-  font-size: 0.9rem;
-  letter-spacing: 1px;
-}
-
-.form-group input,
-.form-group textarea {
-  width: 100%;
-  padding: 0.75rem;
-  border: 1px solid #ddd;
-  border-radius: var(--radius);
-  font-size: 1rem;
-}
-
-.submit-btn {
-  width: 100%;
-  padding: 0.75rem;
-  background-color: var(--accent);
-  color: white;
-  border: none;
-  border-radius: var(--radius);
-  font-size: 1rem;
-  cursor: pointer;
+.exercise-card .description {
   margin-top: 1rem;
+  line-height: 1.6;
+  color: var(--text-color);
+}
+
+.exercise-card .how-to {
+  background-color: rgba(var(--accent-rgb), 0.1);
+  padding: 1rem;
+  border-radius: var(--radius);
+  margin-top: 1rem;
+  border-left: 3px solid var(--accent);
 }
 
 /* Dark mode styles */
-body.dark-mode .training-card {
-  background-color: var(--bg-card);
-  border-color: #333;
+body.dark-mode .exercise-card {
+  background-color: var(--bg-main);
 }
 
-body.dark-mode textarea,
-body.dark-mode input {
-  background-color: #333;
+body.dark-mode .exercise-card .how-to {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.carousel {
+  position: relative;
+  margin: 1rem 0;
+  border-radius: var(--radius);
+  background-color: #00000010;
+  width: 100%;
+  max-width: 320px;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.carousel-image {
+  display: none;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: var(--radius);
+}
+
+.carousel-image.active {
+  display: block;
+}
+.filter-panel {
+  padding: 1.5rem;
+  border-radius: 16px;
+  background-color: #1c1c1c;
   color: #fff;
-  border-color: #555;
+  box-shadow: 0 0 12px rgba(255, 98, 0, 0.25);
+  min-width: 200px;
+  max-height: 400px;
+  overflow-y: auto;
+  position: sticky;
+  top: 1rem;
 }
-#trainingName {
-  width: 100%;
-  padding: 0.8rem;
-  border: 1px solid #ddd;
-  border-radius: var(--radius);
-  font-size: 1rem;
-  margin-bottom: 1.5rem;
+
+.filter-panel h3 {
+  font-size: 1.4rem;
+  color: #ff622d;
+  text-align: center;
+  margin-bottom: 1rem;
 }
-.exercises-container {
-  border: 1px solid #ddd;
-  border-radius: var(--radius);
-  padding: 0;
-  margin-bottom: 1.5rem;
-  background: var(--bg-card);
-}
-#trainingExercises {
-  width: 100%;
-  min-height: 120px;
-  max-height: 120px;
-  padding: 0.8rem;
-  border: none;
-  font-family: inherit;
-  font-size: 1rem;
-  resize: none;
-  background: transparent;
-}
-.delete-training {
-  background: var(--accent);
-  color: white;
-  border: none;
-  padding: 0.5rem 1.5rem;
-  border-radius: 20px;
-  font-weight: 600;
+
+.filter-panel label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #2b2b2b;
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+  transition: background-color 0.2s ease;
   cursor: pointer;
-  margin-top: 1rem;
-  transition: all 0.3s;
-  display: inline-block;
+}
+
+.filter-panel label:hover {
+  background-color: #3a3a3a;
+}
+
+.filter-panel input[type="checkbox"] {
+  accent-color: #ff622d;
+  transform: scale(1.2);
+}
+
+
+.exercises-container > div {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.exercises-list {
+  flex: 1;
+  max-width: 800px;
+}
+.exercise-card {
+  background-color: #1d1d1d;
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 0 10px rgba(255, 98, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.exercise-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 18px rgba(255, 98, 0, 0.35);
+}
+
+.exercise-card h3 {
+  font-size: 1.6rem;
+  color: #ff622d;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.exercises-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  animation: fadeInDown 0.6s ease forwards;
+}
+
+.exercises-header h1 {
+  font-size: 2.5rem;
+  color: #ff622d;
+  margin: 0;
+  background: linear-gradient(90deg, #ff622d, #ffa24c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+}
+
+.exercises-header p {
+  color: #ccc;
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+  font-style: italic;
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
