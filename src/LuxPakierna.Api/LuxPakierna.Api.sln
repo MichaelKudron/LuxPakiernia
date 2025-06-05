@@ -5,11 +5,11 @@ VisualStudioVersion = 17.9.34728.123
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LuxPakierna.Api", "LuxPakierna.Api\LuxPakierna.Api.csproj", "{EA3DC48F-F62B-4011-BC27-CE5E6F7E5687}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LuxPakiernia.Infrastructure", "LuxPakiernia.Infrastructure\LuxPakiernia.Infrastructure.csproj", "{45CD3CF3-1702-46ED-B108-D3AF3DDA4F95}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LuxPakiernia.Infrastructure", "LuxPakiernia.Infrastructure\LuxPakiernia.Infrastructure.csproj", "{45CD3CF3-1702-46ED-B108-D3AF3DDA4F95}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LuxPakiernia.Infrastructure.Domain", "LuxPakiernia.Infrastructure.Domain\LuxPakiernia.Infrastructure.Domain.csproj", "{11654A1D-57F8-4216-A010-F92D75BD6033}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LuxPakiernia.Domain", "LuxPakiernia.Domain\LuxPakiernia.Domain.csproj", "{9A3E2C67-BD12-4098-B94B-DCA33CDA6882}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LuxPakiernia.Application", "LuxPakiernia.Infrastructure.Application\LuxPakiernia.Application.csproj", "{D08B1BD6-8FA9-445D-827E-65466D9801D1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LuxPakiernia.Application", "LuxPakiernia.Application\LuxPakiernia.Application.csproj", "{7D03B669-7C20-421A-8A44-F31903BF0DEF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,14 +25,14 @@ Global
 		{45CD3CF3-1702-46ED-B108-D3AF3DDA4F95}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{45CD3CF3-1702-46ED-B108-D3AF3DDA4F95}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{45CD3CF3-1702-46ED-B108-D3AF3DDA4F95}.Release|Any CPU.Build.0 = Release|Any CPU
-		{11654A1D-57F8-4216-A010-F92D75BD6033}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{11654A1D-57F8-4216-A010-F92D75BD6033}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{11654A1D-57F8-4216-A010-F92D75BD6033}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{11654A1D-57F8-4216-A010-F92D75BD6033}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D08B1BD6-8FA9-445D-827E-65466D9801D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D08B1BD6-8FA9-445D-827E-65466D9801D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D08B1BD6-8FA9-445D-827E-65466D9801D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D08B1BD6-8FA9-445D-827E-65466D9801D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A3E2C67-BD12-4098-B94B-DCA33CDA6882}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A3E2C67-BD12-4098-B94B-DCA33CDA6882}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A3E2C67-BD12-4098-B94B-DCA33CDA6882}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A3E2C67-BD12-4098-B94B-DCA33CDA6882}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D03B669-7C20-421A-8A44-F31903BF0DEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D03B669-7C20-421A-8A44-F31903BF0DEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D03B669-7C20-421A-8A44-F31903BF0DEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D03B669-7C20-421A-8A44-F31903BF0DEF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

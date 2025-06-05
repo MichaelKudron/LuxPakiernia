@@ -1,5 +1,6 @@
 ﻿using LuxPakiernia.Application.Interfaces;
-using LuxPakiernia.Infrastructure.Domain.Entities;
+using LuxPakiernia.Domain.Entities;
+using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;

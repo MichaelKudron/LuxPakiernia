@@ -1,6 +1,13 @@
-﻿using LuxPakiernia.Application.Interfaces;
+﻿using LuxPakierna.Api.Services;
+using LuxPakiernia.Application.Interfaces;
+using LuxPakiernia.Domain.Entities;
+using LuxPakiernia.Infrastructure.Persistance;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.IdentityModel.Tokens;
 using System.Text;
 
 namespace LuxPakiernia.Infrastructure.Configuration;
@@ -8,13 +15,17 @@ public static class ConfigureServices
 {
     public static IServiceCollection AddInfrastructureServices(this IServiceCollection services, IConfiguration configuration)
     {
-        services.AddDbContext<ApplicationDbContext>(options =>
-            options.UseInMemoryDatabase("CleanArchitectureDb"));
+        // Konfiguracja SQLite
+        services.AddDbContext<LuxPakierniaDbContext>(options =>
+            options.UseSqlite(
+                configuration.GetConnectionString("DefaultConnection"),
+                b => b.MigrationsAssembly(typeof(LuxPakierniaDbContext).Assembly.FullName)));
 
-        services.AddScoped<IApplicationDbContext>(provider => provider.GetRequiredService<ApplicationDbContext>());
+        services.AddScoped<ILuxPakierniaDbContext>(provider => provider.GetRequiredService<LuxPakierniaDbContext>());
 
-        services.AddIdentity<ApplicationUser, IdentityRole<Guid>>()
-            .AddEntityFrameworkStores<ApplicationDbContext>()
+
+        services.AddIdentity<User, IdentityRole<Guid>>()
+            .AddEntityFrameworkStores<LuxPakierniaDbContext>()
             .AddDefaultTokenProviders();
 
         services.Configure<IdentityOptions>(options =>
@@ -43,8 +54,9 @@ public static class ConfigureServices
         });
 
         services.AddScoped<ITokenService, TokenService>();
+        services.AddHttpContextAccessor();
+        services.AddScoped<ICurrentUserService, CurrentUserService>();
 
         return services;
     }
-}
 }

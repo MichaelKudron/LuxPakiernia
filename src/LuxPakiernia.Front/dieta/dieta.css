@@ -1,327 +1,465 @@
-.dieta-hero {
-  text-align: center;
-  margin-bottom: 2rem;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.przepisy {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 1.5rem;
-  padding: 1rem;
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    color: #ffffff;
+    min-height: 100vh;
+    padding: 20px;
 }
 
-.przepis-card {
-  background: var(--bg-card);
-  padding: 1.5rem;
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.zapisz-przepis {
-  background: var(--accent);
-  color: white;
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: var(--radius);
-  cursor: pointer;
-  margin-top: 1rem;
-}
-.dieta-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem;
+.header {
+    text-align: center;
+    margin-bottom: 40px;
 }
 
-.dieta-box {
-  background-color: var(--bg-card);
-  padding: 2rem;
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  margin-bottom: 2rem;
+.header h1 {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+    background: linear-gradient(45deg, #ff6b35, #ff8e53);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0 2px 10px rgba(255, 107, 53, 0.3);
 }
 
-.meals-list {
-  background-color: var(--bg-card);
-  padding: 2rem;
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
+.header p {
+    font-size: 1.1rem;
+    color: #cccccc;
+    margin-bottom: 20px;
 }
 
-.meals-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 1.5rem;
-  margin-top: 1.5rem;
+.meal-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-bottom: 30px;
+    padding: 0 10px;
+}
+
+/* Desktop - preferuj więcej kolumn */
+@media (min-width: 1200px) {
+    .meal-grid {
+        grid-template-columns: repeat(4, 1fr);
+        max-width: 1400px;
+        margin: 0 auto 30px auto;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .meal-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .meal-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 .meal-card {
-  background-color: var(--bg-main);
-  padding: 1.5rem;
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  border: 1px solid #eee;
-  overflow-wrap: break-word;  
-  word-break: break-word;   
-  white-space: pre-wrap;
-  position: relative;
-  height: 220px; /* Stała wysokość */
-  perspective: 1000px;
-  cursor: pointer;
-  border-radius: var(--radius);
-  background: var(--bg-card);
-  box-shadow: var(--shadow);
-  overflow: hidden;
-  transition: transform 0.3s;
+    background: #2a2a2a;
+    border: 2px solid #ff6b35;
+    border-radius: 15px;
+    padding: 25px;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    position: relative;
+    overflow: hidden;
+    min-height: 280px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
-.meal-card h4 {
-  margin: 0.5rem 0;
-  line-height: 1.5;
+.meal-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #ff6b35, #ff8e53);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
 }
 
-/* Dark mode styles */
-body.dark-mode .meal-card {
-  background-color: var(--bg-card);
-  border-color: #333;
+.meal-card:hover::before {
+    transform: scaleX(1);
 }
 
-body.dark-mode textarea,
-body.dark-mode input {
-  background-color: #333;
-  color: #fff;
-  border-color: #555;
-}
-button, .meal-btn {
-  background: var(--accent);
-  color: white;
-  border: none;
-  padding: 12px 24px;
-  border-radius: var(--radius);
-  cursor: pointer;
-  font-size: 1rem;
-  font-weight: 600;
-  transition: all 0.3s ease;
-  display: inline-block;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+.meal-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(255, 107, 53, 0.2);
+    border-color: #ff8e53;
 }
 
-button:hover, .meal-btn:hover {
-  background: var(--accent-hover);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+.meal-card.add-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-style: dashed;
+    border-width: 3px;
+    background: linear-gradient(145deg, #2a2a2a, #1f1f1f);
+    transition: all 0.3s ease;
 }
 
-.delete-meal {
-  background: #f44336 !important;
-  margin-top: 10px;
-}
-/* Stały rozmiar pola składników */
-.ingredients-container {
-  margin-bottom: 1.5rem;
+.meal-card.add-card:hover {
+    background: linear-gradient(145deg, #333333, #262626);
+    border-color: #ff8e53;
 }
 
-.textarea-wrapper {
-  position: relative;
-  border: 1px solid #ddd;
-  border-radius: var(--radius);
-  padding: 0;
-  background: var(--bg-card);
+.add-icon {
+    font-size: 4rem;
+    color: #ff6b35;
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
 }
 
-textarea#mealIngredients {
-  width: 100%;
-  min-height: 120px; /* Stała wysokość */
-  max-height: 120px; /* Maksymalna wysokość */
-  padding: 0.75rem;
-  border: none !important;
-  resize: none; /* Blokada zmiany rozmiaru */
-  font-family: inherit;
-  font-size: 1rem;
-  background: transparent;
-  box-shadow: none;
-  outline: none;
+.meal-card.add-card:hover .add-icon {
+    transform: rotate(180deg);
+    color: #ff8e53;
 }
 
-/* Dla trybu ciemnego */
-body.dark-mode .textarea-wrapper {
-  border-color: #555;
-}
-.textarea-wrapper {
-  margin-bottom: 0.5rem;
-}
-.meal-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-/* Styl karty przepisu 3D */
-.meal-card {
-  background-color: var(--bg-card, #fff);
-  border: 1px solid #ddd;
-  padding: 1rem;
-  border-radius: 0.75rem;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease;
+.meal-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 18px;
+    color: #ff6b35;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
-.meal-front, .meal-back {
-  position: absolute;
-  width: calc(100% - 4px); /* Kompensacja dla obramówki */
-  height: calc(100% - 4px);
-  left: 0;
-  top: 0;
-  padding: 1.5rem;
-  backface-visibility: hidden;
-  transition: transform 0.6s;
-  background: var(--bg-card);
-  box-shadow: var(--shadow);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  border-radius: var(--radius);
+.meal-card.add-card .meal-name {
+    font-size: 1.2rem;
+    color: #ff6b35;
+    text-transform: none;
+    letter-spacing: normal;
 }
 
-.meal-front {
-  transform: rotateY(0deg);
+.ingredients {
+    background: linear-gradient(145deg, #1a1a1a, #111111);
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+    color: #e0e0e0;
+    line-height: 1.5;
+    /* border-left usunięty stąd - będzie kontrolowany przez media queries */
 }
 
-.meal-back {
-  transform: rotateY(180deg);
-  border: 2px solid var(--accent);
-  background: var(--bg-card);
-  margin: 2px; 
+/* Ukryj pionowe linie na małych i średnich ekranach */
+@media (max-width: 1024px) {
+    .ingredients {
+        border-left: none;
+    }
 }
 
-.meal-card:hover .meal-front {
-  transform: rotateY(180deg);
+/* Pokaż pionowe linie tylko na bardzo dużych ekranach */
+@media (min-width: 1025px) {
+    .ingredients {
+        border-left: 4px solid #ff6b35;
+    }
 }
 
-.meal-card:hover .meal-back {
-  transform: rotateY(360deg);
+.ingredients strong {
+    color: #ff8e53;
+    display: block;
+    margin-bottom: 8px;
 }
 
-/* Styl makroskładników */
-.macros-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
-  text-align: center;
-  margin: -2px 0;
+.nutrition-info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-top: auto;
 }
 
-.macro-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 0.5rem;
-  background: rgba(211, 47, 47, 0.05); /* Bardzo subtelne tło */
+.nutrition-item {
+    text-align: center;
+    background: linear-gradient(145deg, #1a1a1a, #0f0f0f);
+    padding: 15px 10px;
+    border-radius: 10px;
+    border: 1px solid #333;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
 }
 
-.macro-value {
-  font-size: 1.3rem;
-  font-weight: bold;
-  color: var(--accent); /* Kolor akcentu dla wartości */
+.nutrition-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: #ff6b35;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
 }
 
-.macro-label {
-  font-size: 0.7rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  color: var(--text-muted);
-  margin-top: 0.3rem;
+.meal-card:hover .nutrition-item::before {
+    transform: scaleX(1);
 }
 
-/* Przycisk USUŃ */
-.delete-meal {
-  background: var(--accent);
-  color: white;
-  border: none;
-  padding: 0.5rem 1.5rem;
-  border-radius: 20px;
-  margin-top: 1rem;
-  font-weight: bold;
-  cursor: pointer;
-  transition: all 0.3s;
-}
-.delete-meal:hover {
-  background: var(--accent-hover);
-  transform: translateY(-2px);
-}
-meal-card:hover .meal-front {
-  transform: rotateY(180deg) translateZ(1px); /* Delikatne wysunięcie */
-}
-.meal-card:hover .meal-back {
-  transform: rotateY(360deg) translateZ(1px);
-}
-.meals-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 1.5rem;
-}
-/* Kontener formularza */
-.dieta-box {
-  background-color: var(--bg-card);
-  padding: 2rem;
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  max-width: 500px;
-  margin: 0 auto;
+.nutrition-item:hover {
+    transform: translateY(-2px);
+    border-color: #ff6b35;
 }
 
-.dieta-box h3 {
-  color: var(--accent);
-  margin-bottom: 1.5rem;
-  text-align: center;
-  font-size: 1.5rem;
+.nutrition-value {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #ff6b35;
+    display: block;
+    margin-bottom: 5px;
 }
 
-/* Grupa formularza */
+.nutrition-label {
+    font-size: 0.75rem;
+    color: #aaa;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.delete-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: linear-gradient(145deg, #ff4444, #cc3333);
+    border: none;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    color: white;
+    cursor: pointer;
+    font-size: 1.2rem;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 10px rgba(255, 68, 68, 0.3);
+}
+
+.meal-card:hover .delete-btn {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.delete-btn:hover {
+    background: linear-gradient(145deg, #ff6666, #ff4444);
+    transform: scale(1.1);
+}
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    background: linear-gradient(145deg, #2a2a2a, #1f1f1f);
+    margin: 3% auto;
+    padding: 35px;
+    border: 2px solid #ff6b35;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 550px;
+    position: relative;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    animation: modalSlideIn 0.3s ease-out;
+}
+
+@keyframes modalSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.modal h2 {
+    color: #ff6b35;
+    margin-bottom: 25px;
+    text-align: center;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
 .form-group {
-  margin-bottom: 1.5rem;
+    margin-bottom: 25px;
 }
 
 .form-group label {
-  display: block;
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-  color: var(--text-main);
+    display: block;
+    margin-bottom: 8px;
+    color: #e0e0e0;
+    font-weight: bold;
+    font-size: 0.95rem;
 }
 
-/* Pola input */
-.form-group input[type="text"],
+.form-group input,
 .form-group textarea {
-  width: 100%;
-  padding: 0.8rem;
-  border: 1px solid #ddd;
-  border-radius: var(--radius);
-  font-size: 1rem;
-  background-color: var(--bg-card);
-  color: var(--text-main);
-  transition: border 0.3s;
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #333;
+    border-radius: 10px;
+    background: linear-gradient(145deg, #1a1a1a, #111111);
+    color: #ffffff;
+    font-size: 1rem;
+    transition: all 0.3s ease;
 }
 
-.form-group input[type="text"]:focus,
+.form-group input:focus,
 .form-group textarea:focus {
-  border-color: var(--accent);
-  outline: none;
-  box-shadow: 0 0 0 2px rgba(211, 47, 47, 0.1);
+    outline: none;
+    border-color: #ff6b35;
+    box-shadow: 0 0 15px rgba(255, 107, 53, 0.2);
 }
 
-/* Dark mode */
-body.dark-mode .form-group input[type="text"],
-body.dark-mode .form-group textarea {
-  border-color: #555;
-  background-color: #333;
+.form-group textarea {
+    resize: vertical;
+    min-height: 90px;
+    line-height: 1.5;
 }
 
-body.dark-mode .form-group input[type="text"]:focus,
-body.dark-mode .form-group textarea:focus {
-  border-color: var(--accent);
+.nutrition-inputs {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
 }
 
+.btn {
+    background: linear-gradient(145deg, #ff6b35, #ff8e53);
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
 
+.btn:hover {
+    background: linear-gradient(145deg, #ff8e53, #ffaa73);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(255, 107, 53, 0.4);
+}
 
+.btn-secondary {
+    background: linear-gradient(145deg, #666, #555);
+    margin-right: 15px;
+}
 
+.btn-secondary:hover {
+    background: linear-gradient(145deg, #777, #666);
+    box-shadow: 0 5px 20px rgba(102, 102, 102, 0.3);
+}
 
+.close {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    color: #999;
+    font-size: 32px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.close:hover {
+    color: #ff6b35;
+    transform: rotate(90deg);
+}
+
+.button-group {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 30px;
+}
+
+/* Responsive design */
+@media (max-width: 767px) {
+    .meal-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 0;
+    }
+    
+    .nutrition-inputs {
+        grid-template-columns: 1fr;
+    }
+    
+    .header h1 {
+        font-size: 2.2rem;
+    }
+    
+    .modal-content {
+        margin: 5% auto;
+        padding: 25px;
+        width: 95%;
+    }
+    
+    .nutrition-info {
+        gap: 8px;
+    }
+    
+    .nutrition-item {
+        padding: 12px 8px;
+    }
+    
+    .nutrition-value {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 15px;
+    }
+    
+    .header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .header p {
+        font-size: 1rem;
+    }
+    
+    .meal-card {
+        padding: 20px;
+        min-height: 260px;
+    }
+    
+    .button-group {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .btn-secondary {
+        margin-right: 0;
+    }
+}

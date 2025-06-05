@@ -361,3 +361,5 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/src/LuxPakierna.Api/.vs/LuxPakierna.Api/DesignTimeBuild/.dtbcache.v2
+/src/LuxPakierna.Api/.vs/ProjectEvaluation/luxpakierna.api.metadata.v7.bin
