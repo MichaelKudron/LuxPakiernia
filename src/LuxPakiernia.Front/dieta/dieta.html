@@ -5,86 +5,64 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Zdrowie i dieta – LuxPakiernia</title>
   <link rel="stylesheet" href="../index.css">
-  <link rel="stylesheet" href="dieta.css">
-</head>
+  <link rel="stylesheet" href="dieta.css"></head>
 <body>
-  <header>
-    <div class="logo">
-      <img id="logo" src="../assets/logo.png">
-      <h3>LuxPakiernia</h3>
-    </div>
-    <label class="switch">
-      <input type="checkbox" id="darkModeToggle">
-      <span class="slider"></span>
-    </label>
-    <nav id="navMenu">
-      <ul>
-        <li><a href="../index.html">Strona główna</a></li>
-        <li><a href="../login/login.html">Zaloguj się</a></li>
-        <li><a href="../register/register.html">Zarejestruj się</a></li>
-        <li><a href="../bmi/bmi.html">Kalkulator BMI</a></li> 
-      </ul>
-    </nav>
-    <button class="hamburger" id="hamburgerBtn" aria-label="Menu">&#9776;</button>
-  </header>
-
-  <main>
-    <section class="dieta-container">
-      <h2>Planer żywieniowy</h2>
-      
-      <div class="dieta-box">
-        <h3>Dodaj posiłek</h3>
-        <form id="mealForm">
-          <div class="form-group">
-            <label for="mealName">Nazwa posiłku</label>
-            <input type="text" id="mealName" required>
-          </div>
-          <div class="form-group ingredients-container">
-            <label for="mealIngredients">Składniki</label>
-            <div class="textarea-wrapper">
-              <textarea 
-                id="mealIngredients" 
-                rows="4" 
-                required
-                placeholder="Wpisz składniki oddzielone przecinkami..."
-              ></textarea>
-            </div>
-          </div>
-          <button type="submit">Dodaj przepis</button>
-        </form>
-      </div>
-
-      <div class="meals-list">
-        <h3>Twoje posiłki</h3>
-        <div id="mealsContainer" class="meals-grid">
-            <div class="meal-back">
-              <div class="macros-grid">
-                <div class="macro-item">
-                  <span class="macro-value">33g</span>
-                  <span class="macro-label">węglowodany</span>
-                </div>
-                <div class="macro-item">
-                  <span class="macro-value">29g</span>
-                  <span class="macro-label">białko</span>
-                </div>
-                <div class="macro-item">
-                  <span class="macro-value">37g</span>
-                  <span class="macro-label">tłuszcze</span>
-                </div>
-              </div>
-              <button class="delete-meal">USUŃ</button>
-            </div>
-          </div>
+    <div class="container">
+        <div class="header">
+            <h1>Panel Dietetyczny</h1>
+            <p>Zarządzaj swoimi posiłkami i śledź wartości odżywcze</p>
         </div>
-      </div>
-    </section>
-  </main>
 
-  <footer>
-    <p>Made by Michał Kobryń and Hubert Bobowik and Michał Tyniewicki and Yelyzaveta &copy; 2025 LuxPakiernia</p>
-  </footer>
+        <div class="meal-grid" id="mealGrid">
+            <div class="meal-card add-card" onclick="openModal()">
+                <div class="add-icon">+</div>
+                <div class="meal-name">Dodaj Posiłek</div>
+            </div>
+        </div>
+    </div>
 
-  <script src="../index.js"></script>
-  <script src="dieta.js"></script>
+    <!-- Modal -->
+    <div id="mealModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Dodaj Nowy Posiłek</h2>
+            <form id="mealForm">
+                <div class="form-group">
+                    <label for="mealName">Nazwa Posiłku:</label>
+                    <input type="text" id="mealName" name="mealName" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="ingredients">Składniki:</label>
+                    <textarea id="ingredients" name="ingredients" placeholder="Wymień składniki posiłku..." required></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label>Wartości Odżywcze (na 100g):</label>
+                    <div class="nutrition-inputs">
+                        <div>
+                            <label for="protein">Białko (g):</label>
+                            <input type="number" id="protein" name="protein" step="0.1" min="0" required>
+                        </div>
+                        <div>
+                            <label for="carbs">Węglowodany (g):</label>
+                            <input type="number" id="carbs" name="carbs" step="0.1" min="0" required>
+                        </div>
+                        <div>
+                            <label for="fat">Tłuszcze (g):</label>
+                            <input type="number" id="fat" name="fat" step="0.1" min="0" required>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="button-group">
+                    <button type="button" class="btn btn-secondary" onclick="closeModal()">Anuluj</button>
+                    <button type="submit" class="btn">Dodaj Posiłek</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="dieta.js"></script>
 </body>
 </html>
