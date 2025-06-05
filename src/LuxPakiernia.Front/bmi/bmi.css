@@ -51,11 +51,13 @@ button[type="submit"] {
   font-weight: 600;
   cursor: pointer;
   margin-top: 1.5rem;
-  transition: background-color 0.3s;
+  transition: background-color 0.2s ease-in-out, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 button[type="submit"]:hover {
   background-color: var(--accent-hover);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 .result-container {
