@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gwiazdy Siłowni i Kulturystyki | LuxPakiernia</title>
+  <link rel="stylesheet" href="../index.css" />
+  <link rel="stylesheet" href="gwiazdy.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img id="logo" src="../assets/logo.png">
+      <h3>LuxPakiernia</h3>
+    </div>
+
+    <label class="switch">
+      <input type="checkbox" id="darkModeToggle">
+      <span class="slider"></span>
+    </label>
+    
+    <div class="menuBurger">
+      <button class="hamburger" id="hamburgerBtn" aria-label="Menu">&#9776;</button>
+    </div>
+    
+    <nav id="navMenu">
+      <ul>
+        <li><a href="../index.html">Strona główna</a></li>
+        <li><a href="../login/login.html">Zaloguj się</a></li>
+        <li><a href="../register/register.html">Zarejestruj się</a></li>
+        <li><a href="../bmi/bmi.html">Kalkulator BMI</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="stars-hero">
+      <h1>Gwiazdy Siłowni i Kulturystyki</h1>
+      <p>Poznaj ikony fitnessu i kulturystyki, które inspirują miliony na całym świecie</p>
+    </section>
+
+    <div class="stars-carousel">
+      <button class="carousel-btn prev" aria-label="Poprzednia gwiazda">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+      
+      <div class="carousel-container" id="starsCarousel">
+        <!-- Tutaj będą dynamicznie ładowane gwiazdy -->
+      </div>
+      
+      <button class="carousel-btn next" aria-label="Następna gwiazda">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+    </div>
+
+    <div class="stars-dots" id="starsDots">
+      <!-- Tutaj będą dodawane kropki nawigacyjne -->
+    </div>
+  </main>
+
+  <footer>
+    <p>Made by Michał Kobryń and Hubert Bobowik and Michał Tyniewicki and Yelyzaveta &copy; 2025 LuxPakiernia</p>
+  </footer>
+
+  <script src="../index.js"></script>
+  <script src="gwiazdy.js"></script>
+</body>
+</html>

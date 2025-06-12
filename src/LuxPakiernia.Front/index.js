@@ -30,3 +30,13 @@ document.addEventListener("DOMContentLoaded", () => {
   // Inicjalizuj tryb ciemny
   initDarkMode();
 });
+// Animacja dla przycisku gwiazdy
+document.querySelectorAll('.gold-button').forEach(button => {
+  button.addEventListener('mouseenter', () => {
+    button.querySelector('.star-icon').style.animation = 'pulse 0.5s infinite';
+  });
+  
+  button.addEventListener('mouseleave', () => {
+    button.querySelector('.star-icon').style.animation = 'pulse 2s infinite';
+  });
+});

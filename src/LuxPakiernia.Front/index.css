@@ -485,4 +485,53 @@ body.dark-mode .feature-item {
 .cta-button {
   margin-bottom: 2rem;
 }
+/* Styl dla złotego przycisku */
+.gold-button-container {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+}
 
+.gold-button {
+  background: linear-gradient(145deg, #FFD700, #D4AF37);
+  color: #333;
+  font-weight: bold;
+  padding: 1.2rem 2.5rem;
+  border-radius: var(--radius);
+  text-decoration: none;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.gold-button:hover {
+  background: linear-gradient(145deg, #FFDF00, #E6C200);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.6);
+}
+
+.star-icon {
+  font-size: 1.5rem;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+/* Responsywność */
+@media (max-width: 768px) {
+  .gold-button {
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+  }
+}
