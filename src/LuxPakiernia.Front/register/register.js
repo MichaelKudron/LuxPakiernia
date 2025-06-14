@@ -1,4 +1,4 @@
-document.getElementById("registerForm").addEventListener("submit", function (e) {
+document.getElementById("registerForm").addEventListener("submit", async function (e) {
   e.preventDefault();
 
   const email = document.getElementById("email").value.trim();
@@ -23,8 +23,36 @@ document.getElementById("registerForm").addEventListener("submit", function (e) 
     return;
   }
 
-  // Tu możesz podpiąć POST do API
-  console.log("Rejestracja zakończona:", email);
-  alert("Rejestracja zakończona sukcesem (symulacja).");
-});
+  try {
+    const response = await fetch("http://localhost:5223/api/Auth/register", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        login: email,
+        password: password,
+        passwordConfirm: confirmPassword
+      })
+    });
 
+    if (response.ok) {
+      const data = await response.json();
+
+      // Zakładamy, że API zwraca UserDTO:
+      // { token: "...", userId: "...", login: "..." }
+
+      localStorage.setItem("token", data.token);
+      localStorage.setItem("userId", data.userId);
+      localStorage.setItem("login", data.login);
+
+      window.location.href = "/LuxPakiernia.Front/"; // przekierowanie na stronę główną
+    } else {
+      const errorData = await response.text();
+      errorBox.textContent = `Rejestracja nie powiodła się: ${errorData}`;
+    }
+  } catch (error) {
+    console.error("Błąd sieci:", error);
+    errorBox.textContent = "Wystąpił błąd podczas rejestracji. Spróbuj ponownie później.";
+  }
+});

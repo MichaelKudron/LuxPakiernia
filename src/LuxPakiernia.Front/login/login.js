@@ -1,4 +1,4 @@
-document.getElementById("loginForm").addEventListener("submit", function (e) {
+document.getElementById("loginForm").addEventListener("submit", async function (e) {
   e.preventDefault();
 
   const email = document.getElementById("email").value.trim();
@@ -17,7 +17,32 @@ document.getElementById("loginForm").addEventListener("submit", function (e) {
     return;
   }
 
-  // Tu można dodać obsługę logowania np. do API lub mocka
-  console.log("Próba logowania:", email, password);
-  alert("Logowanie zakończone sukcesem (symulacja).");
+  try {
+    const response = await fetch("http://localhost:5223/api/Auth/login", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        login: email,       // <-- backend oczekuje pola "login", nie "email"
+        password: password
+      })
+    });
+
+    if (!response.ok) {
+      const errorText = await response.text();
+      throw new Error(errorText || "Logowanie nie powiodło się.");
+    }
+
+    const data = await response.json();
+
+    // Zakładamy, że zwraca UserDTO: { token, userId, login }
+    localStorage.setItem("token", data.token);
+    localStorage.setItem("userId", data.userId);
+    localStorage.setItem("login", data.login);
+
+    window.location.href = "/LuxPakiernia.Front/"; // przekierowanie po zalogowaniu
+  } catch (err) {
+    errorBox.textContent = err.message;
+  }
 });
