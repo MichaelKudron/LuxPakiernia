@@ -41,7 +41,7 @@ document.getElementById("loginForm").addEventListener("submit", async function (
     localStorage.setItem("userId", data.userId);
     localStorage.setItem("login", data.login);
 
-    window.location.href = "/LuxPakiernia.Front/"; // przekierowanie po zalogowaniu
+    window.location.href = "../index.html"; // przekierowanie po zalogowaniu
   } catch (err) {
     errorBox.textContent = err.message;
   }

@@ -46,7 +46,7 @@ document.getElementById("registerForm").addEventListener("submit", async functio
       localStorage.setItem("userId", data.userId);
       localStorage.setItem("login", data.login);
 
-      window.location.href = "/LuxPakiernia.Front/"; // przekierowanie na stronę główną
+      window.location.href = "../index.html"; // przekierowanie na stronę główną
     } else {
       const errorData = await response.text();
       errorBox.textContent = `Rejestracja nie powiodła się: ${errorData}`;
