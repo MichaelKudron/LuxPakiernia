@@ -2,8 +2,8 @@
 public class Plan
 {
     public Guid Id { get; set; }
+    public Guid UserId { get; set; }
+    public User User { get; set; }
 
-    public ICollection<ExerciseInPlan> Exercises { get; set; }
-    public ICollection<PlanUser> PlanUsers { get; set; }
-
+    public ICollection<ExerciseInPlan> ExercisesInPlans { get; set; }
 }
