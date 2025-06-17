@@ -19,9 +19,9 @@ public class ExerciseController : BaseContrller
     }
 
     [HttpGet("GetAllExercisess")]
-    public async Task<IActionResult> GetAll()
+    public async Task<IActionResult> GetAll(GetAllExercisesQuery query)
     {
-        var result = await _mediator.Send(new GetAllExercisesQuery());
+        var result = await _mediator.Send(query);
         return Ok(result);
     }
 
