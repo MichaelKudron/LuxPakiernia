@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dodaj ćwiczenie - LuxPakiernia</title>
+  <link rel="stylesheet" href="../index.css">
+  <link rel="stylesheet" href="add-exercise.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img id="logo" src="../assets/logo.png">
+      <h3>LuxPakiernia</h3>
+    </div>
+
+    <label class="switch">
+      <input type="checkbox" id="darkModeToggle">
+      <span class="slider"></span>
+    </label>
+    
+    <div class="menuBurger">
+      <button class="hamburger" id="hamburgerBtn" aria-label="Menu">&#9776;</button>
+    </div>
+    
+    <nav id="navMenu">
+      <ul>
+        <li><a href="../login/login.html">Zaloguj się</a></li>
+        <li><a href="../register/register.html">Zarejestruj się</a></li>
+        <li><a href="../index.html">Strona główna</a></li>
+        <li><a href="../bmi/bmi.html">Kalkulator BMI</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="exercise-main">
+    <div class="exercise-container">
+      <h1>Dodaj nowe ćwiczenie</h1>
+      <p>Wypełnij formularz aby dodać nowe ćwiczenie do systemu</p>
+      
+      <div class="exercise-form">
+        <div class="form-group">
+          <label>Nazwa ćwiczenia</label>
+          <input type="text" placeholder="np. Przysiady ze sztangą">
+        </div>
+        
+        <div class="form-group">
+          <label>Opis ćwiczenia</label>
+          <textarea class="fixed-size" placeholder="Opisz technikę wykonania ćwiczenia"></textarea>
+        </div>
+        
+        <div class="form-group">
+          <label>Partia mięśniowa</label>
+          <input type="text" placeholder="np. Nogi, Klatka piersiowa">
+        </div>
+        
+        <div class="form-actions">
+          <button class="submit-btn">Dodaj ćwiczenie</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>Made by Michał Kobryń and Hubert Bobowik and Michał Tyniewicki and Yelyzaveta &copy; 2025 LuxPakiernia</p>
+  </footer>
+
+  <script src="../index.js"></script>
+  <script src="add-exercise.js"></script>
+</body>
+</html>
