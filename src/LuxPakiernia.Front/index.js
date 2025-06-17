@@ -95,3 +95,4 @@ document.querySelectorAll('.gold-button').forEach(button => {
     button.querySelector('.star-icon').style.animation = 'pulse 2s infinite';
   });
 });
+handleAuthUI(); 

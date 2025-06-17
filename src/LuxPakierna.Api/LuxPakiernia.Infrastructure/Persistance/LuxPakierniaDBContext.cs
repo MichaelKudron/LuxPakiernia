@@ -9,6 +9,10 @@ public class LuxPakierniaDbContext(DbContextOptions<LuxPakierniaDbContext> optio
           : DbContext(options), ILuxPakierniaDbContext
 {
     public DbSet<User> User { get; set; }
+    public DbSet<Exercise> Exercises { get; set; }
+    public DbSet<Plan> Plans { get; set; }
+    public DbSet<ExerciseInPlan> ExercisesInPlans { get; set; }
+    public DbSet<PlanUser> PlanUsers { get; set; }
     protected override void OnModelCreating(ModelBuilder builder)
     {
         base.OnModelCreating(builder);

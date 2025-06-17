@@ -1,7 +1,9 @@
 ﻿using LuxPakierna.Api.Services;
 using LuxPakiernia.Application.Interfaces;
 using LuxPakiernia.Domain.Entities;
+using LuxPakiernia.Domain.Repositories;
 using LuxPakiernia.Infrastructure.Persistance;
+using LuxPakiernia.Infrastructure.Repositories;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -23,7 +25,7 @@ public static class ConfigureServices
 
         services.AddScoped<ILuxPakierniaDbContext>(provider => provider.GetRequiredService<LuxPakierniaDbContext>());
 
-
+        services.AddScoped<IExerciseRepository, ExerciseRepository>();
         services.AddIdentity<User, IdentityRole<Guid>>()
             .AddEntityFrameworkStores<LuxPakierniaDbContext>()
             .AddDefaultTokenProviders();
