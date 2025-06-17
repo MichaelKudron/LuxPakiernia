@@ -18,10 +18,10 @@ public class ExerciseController : BaseContrller
         _mediator = mediator;
     }
 
-    [HttpGet("GetAllExercises/{muscleGroup}/{sortByName}")]
-    public async Task<IActionResult> GetAll([FromRoute] string muscleGroup, [FromRoute] string sortByName)
+    [HttpGet("GetAllExercisess")]
+    public async Task<IActionResult> GetAll(GetAllExercisesQuery query)
     {
-        var result = await _mediator.Send(new GetAllExercisesQuery { MuscleGroup = muscleGroup, SortByName = sortByName });
+        var result = await _mediator.Send(query);
         return Ok(result);
     }
 
