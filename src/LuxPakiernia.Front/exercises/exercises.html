@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista ćwiczeń - LuxPakiernia</title>
+  <link rel="stylesheet" href="../index.css">
+  <link rel="stylesheet" href="exercises.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img id="logo" src="../assets/logo.png">
+      <h3>LuxPakiernia</h3>
+    </div>
+
+    <label class="switch">
+      <input type="checkbox" id="darkModeToggle">
+      <span class="slider"></span>
+    </label>
+    
+    <div class="menuBurger">
+      <button class="hamburger" id="hamburgerBtn" aria-label="Menu">&#9776;</button>
+    </div>
+    
+    <nav id="navMenu">
+      <ul>
+        <li><a href="../index.html">Strona główna</a></li>
+        <li><a href="../login/login.html">Zaloguj się</a></li>
+        <li><a href="../register/register.html">Zarejestruj się</a></li>
+        <li><a href="../bmi/bmi.html">Kalkulator BMI</a></li>
+        <li><a href="../add-exercise/add-exercise.html">Dodaj ćwiczenie</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="exercises-main">
+    <div class="exercises-container">
+      <div class="exercises-header">
+        <h1>Lista ćwiczeń</h1>
+        <a href="../add-exercise/add-exercise.html" class="add-exercise-btn">
+          <span>+</span> Dodaj ćwiczenie
+        </a>
+      </div>
+      
+      <div class="filters">
+        <div class="filter-group">
+          <label for="muscleGroup">Partia mięśniowa:</label>
+          <select id="muscleGroup">
+            <option value="none">Wszystkie partie</option>
+            <option value="Klatka piersiowa">Klatka piersiowa</option>
+            <option value="Plecy">Plecy</option>
+            <option value="Nogi">Nogi</option>
+            <option value="Biceps">Biceps</option>
+            <option value="Triceps">Triceps</option>
+            <option value="Barki">Barki</option>
+            <option value="Brzuch">Brzuch</option>
+            <option value="Łydki">Łydki</option>
+          </select>
+        </div>
+        
+        <div class="filter-group">
+          <label for="sortOrder">Sortowanie:</label>
+          <select id="sortOrder">
+            <option value="none">Domyślne</option>
+            <option value="asc">Nazwa A-Z</option>
+            <option value="desc">Nazwa Z-A</option>
+          </select>
+        </div>
+        
+        <button id="applyFilters" class="apply-btn">Zastosuj filtry</button>
+      </div>
+      
+      <div class="exercises-list" id="exercisesList">
+        <!-- Ćwiczenia będą ładowane dynamicznie -->
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>Made by Michał Kobryń and Hubert Bobowik and Michał Tyniewicki and Yelyzaveta &copy; 2025 LuxPakiernia</p>
+  </footer>
+
+  <script src="exercises.js"></script>
+</body>
+</html>
