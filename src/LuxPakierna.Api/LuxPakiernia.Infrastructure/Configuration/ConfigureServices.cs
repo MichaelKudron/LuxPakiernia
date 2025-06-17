@@ -26,6 +26,8 @@ public static class ConfigureServices
         services.AddScoped<ILuxPakierniaDbContext>(provider => provider.GetRequiredService<LuxPakierniaDbContext>());
 
         services.AddScoped<IExerciseRepository, ExerciseRepository>();
+        services.AddScoped<IExerciseInPlanRepository, ExerciseInPlanRepository>();
+        services.AddScoped<IPlanRepository, PlanRepository>();
         services.AddIdentity<User, IdentityRole<Guid>>()
             .AddEntityFrameworkStores<LuxPakierniaDbContext>()
             .AddDefaultTokenProviders();

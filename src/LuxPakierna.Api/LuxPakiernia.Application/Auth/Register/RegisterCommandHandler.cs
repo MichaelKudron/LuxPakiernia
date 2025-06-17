@@ -2,13 +2,15 @@
 using LuxPakiernia.Application.Interfaces;
 using LuxPakiernia.Application.Models;
 using LuxPakiernia.Domain.Entities;
+using LuxPakiernia.Domain.Repositories;
 using MediatR;
 using Microsoft.AspNetCore.Identity;
 namespace LuxPakiernia.Application.Auth.Register;
 public class RegisterCommandHandler(
         UserManager<User> userManager,
-        ITokenService tokenService) : IRequestHandler<RegisterCommand, Result<UserDTO>>
+        ITokenService tokenService, IPlanRepository planRepository) : IRequestHandler<RegisterCommand, Result<UserDTO>>
 {
+    IPlanRepository _planRepository = planRepository;
     public async Task<Result<UserDTO>> Handle(RegisterCommand request, CancellationToken cancellationToken)
     {
         if (request.Password != request.PasswordConfirm)
@@ -24,6 +26,13 @@ public class RegisterCommandHandler(
         };
 
         var result = await userManager.CreateAsync(user, request.Password);
+        var plan = new Plan
+        {
+            Id = Guid.NewGuid(),
+            UserId = user.Id
+        };
+
+        await _planRepository.CreateAsync(plan);
 
         if (!result.Succeeded)
         {
