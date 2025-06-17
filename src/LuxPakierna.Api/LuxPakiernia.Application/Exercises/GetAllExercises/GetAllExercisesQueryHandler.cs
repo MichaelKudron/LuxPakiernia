@@ -17,8 +17,11 @@ public class GetAllExercisesQueryHandler : IRequestHandler<GetAllExercisesQuery,
         var exercises = await _repo.GetAllAsync();
         if (!string.IsNullOrEmpty(request.MuscleGroup))
         {
-            exercises = exercises.Where(e =>
-                e.MuscleGroup.Equals(request.MuscleGroup, StringComparison.OrdinalIgnoreCase));
+            if (!string.Equals(request.MuscleGroup, "none"))
+            {
+                exercises = exercises.Where(e =>
+                    e.MuscleGroup.Equals(request.MuscleGroup, StringComparison.OrdinalIgnoreCase));
+            }
         }
 
         // Sortowanie
