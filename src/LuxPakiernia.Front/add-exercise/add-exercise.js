@@ -39,7 +39,8 @@ document.addEventListener("DOMContentLoaded", () => {
       });
 
       if (response.ok) {
-        document.querySelector(".exercise-form").reset();
+        document.querySelector(".exercise-form").remove;
+         window.location.href = "../index.html";
         // Cichy sukces - możesz dodać console.log jeśli potrzebujesz logów
       } else {
         console.error("Błąd serwera:", await response.text());
