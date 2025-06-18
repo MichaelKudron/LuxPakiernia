@@ -17,7 +17,9 @@ public class PlanRepository : IPlanRepository
         => await _dbContext.Plans.FirstOrDefaultAsync(p => p.Id == id);
 
     public async Task<Plan?> GetByUserIdAsync(Guid userId)
-    => await _dbContext.Plans.FirstOrDefaultAsync(p => Guid.Equals(userId, p.UserId));
+    {
+        return await _dbContext.Plans.FirstOrDefaultAsync(p => p.UserId == userId);
+    }
 
 
     public async Task<IEnumerable<Plan>> GetAllAsync()
