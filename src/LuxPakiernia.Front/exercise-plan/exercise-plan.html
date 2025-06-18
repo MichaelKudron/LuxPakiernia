@@ -3,91 +3,63 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Plan ćwiczeń - LuxPakiernia</title>
-  <link rel="stylesheet" href="../index.css">
+  <title>Dodaj ćwiczenie do planu</title>
+  <link rel="stylesheet" href="../styles/reset.css">
+  <link rel="stylesheet" href="../styles/index.css">
+  <link rel="stylesheet" href="../styles/exercise-plan.css">
   <link rel="stylesheet" href="exercise-plan.css">
 </head>
 <body>
   <header>
-    <div class="logo">
-      <img id="logo" src="../assets/logo.png">
-      <h3>LuxPakiernia</h3>
+    <div class="container">
+      <a href="../index.html" class="logo">LuxPakiernia</a>
+      <nav id="navMenu">
+        <ul>
+          <li><a href="../index.html">Strona główna</a></li>
+          <li><a href="../exercises/list.html">Lista ćwiczeń</a></li>
+          <li><a href="../plan/plan.html">Twój plan</a></li>
+          <li><a href="../login/login.html">Zaloguj się</a></li>
+        </ul>
+      </nav>
+      <button id="hamburgerBtn" class="hamburger">☰</button>
     </div>
-
-    <label class="switch">
-      <input type="checkbox" id="darkModeToggle">
-      <span class="slider"></span>
-    </label>
-    
-    <div class="menuBurger">
-      <button class="hamburger" id="hamburgerBtn" aria-label="Menu">&#9776;</button>
-    </div>
-    
-    <nav id="navMenu">
-      <ul>
-        <li><a href="../index.html">Strona główna</a></li>
-        <li><a href="../login/login.html">Zaloguj się</a></li>
-        <li><a href="../register/register.html">Zarejestruj się</a></li>
-        <li><a href="../bmi/bmi.html">Kalkulator BMI</a></li>
-        <li><a href="../exercises/exercises.html">Lista ćwiczeń</a></li>
-        <li><a href="../add-exercise/add-exercise.html">Dodaj ćwiczenie</a></li>
-      </ul>
-    </nav>
   </header>
 
-  <main class="exercise-plan-main">
-    <div class="exercise-plan-container">
-      <div class="exercise-plan-header">
-        <h1>Twój plan ćwiczeń</h1>
-        <button id="addExerciseToPlan" class="add-exercise-btn">
-          <span>+</span> Dodaj ćwiczenie do planu
-        </button>
+  <main class="main-content">
+    <section class="form-section">
+      <h1>Dodaj ćwiczenie do planu</h1>
+      <div class="day-selector">
+        <button class="day-tab active" data-day="poniedzialek">Pon</button>
+        <button class="day-tab" data-day="wtorek">Wto</button>
+        <button class="day-tab" data-day="sroda">Śro</button>
+        <button class="day-tab" data-day="czwartek">Czw</button>
+        <button class="day-tab" data-day="piatek">Pią</button>
+        <button class="day-tab" data-day="sobota">Sob</button>
+        <button class="day-tab" data-day="niedziela">Nie</button>
       </div>
-      
-      <div class="days-tabs">
-        <div class="day-tab active" data-day="poniedzialek">Poniedziałek</div>
-        <div class="day-tab" data-day="wtorek">Wtorek</div>
-        <div class="day-tab" data-day="sroda">Środa</div>
-        <div class="day-tab" data-day="czwartek">Czwartek</div>
-        <div class="day-tab" data-day="piatek">Piątek</div>
-        <div class="day-tab" data-day="sobota">Sobota</div>
-        <div class="day-tab" data-day="niedziela">Niedziela</div>
-      </div>
-      
-      <div class="exercise-plan-content">
-        <div id="exercisesContainer" class="exercises-list">
-          <!-- Ćwiczenia będą ładowane dynamicznie -->
+      <form id="addExerciseForm" class="exercise-form">
+        <label for="exerciseSelect">Wybierz ćwiczenie:</label>
+        <select id="exerciseSelect"></select>
+
+        <label for="seriesCount">Liczba serii:</label>
+        <input type="number" id="seriesCount" min="1" required>
+
+        <label for="repetitionCount">Liczba powtórzeń:</label>
+        <input type="number" id="repetitionCount" min="1" required>
+
+        <label for="weight">Obciążenie (kg):</label>
+        <input type="number" id="weight" min="0" step="0.5" required>
+
+        <div class="form-actions">
+          <button type="button" id="confirmAddExercise" class="btn primary">Dodaj</button>
+          <button type="button" id="cancelAddExercise" class="btn">Anuluj</button>
         </div>
-        
-        <div id="addExerciseForm" class="add-exercise-form" style="display: none;">
-          <h3>Dodaj ćwiczenie do planu</h3>
-          <div class="form-group">
-            <label for="exerciseSelect">Wybierz ćwiczenie:</label>
-            <select id="exerciseSelect" class="exercise-select"></select>
-          </div>
-          <div class="form-group">
-            <label for="seriesCount">Liczba serii:</label>
-            <input type="number" id="seriesCount" min="1" value="3">
-          </div>
-          <div class="form-group">
-            <label for="repetitionCount">Liczba powtórzeń:</label>
-            <input type="number" id="repetitionCount" min="1" value="10">
-          </div>
-          <div class="form-group">
-            <label for="weight">Obciążenie (kg):</label>
-            <input type="number" id="weight" min="0" value="0" step="0.5">
-          </div>
-          <div class="form-actions">
-            <button id="cancelAddExercise" class="cancel-btn">Anuluj</button>
-            <button id="confirmAddExercise" class="confirm-btn">Dodaj</button>
-          </div>
-        </div>
-      </div>
-    </div>
+      </form>
+    </section>
   </main>
 
   <footer>
-    <p>Made by Michał Kobryń and Hubert Bobowik and Michał Tyniewicki and Yelyzaveta &copy; 2025 LuxPakiernia</p>
+    <p>© 2025 LuxPakiernia</p>
   </footer>
 
   <script src="exercise-plan.js"></script>

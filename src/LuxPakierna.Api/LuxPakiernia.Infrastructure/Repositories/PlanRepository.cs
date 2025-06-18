@@ -18,6 +18,8 @@ public class PlanRepository : IPlanRepository
 
     public async Task<Plan?> GetByUserIdAsync(Guid userId)
     {
+        var allPlans = await _dbContext.Plans.ToListAsync();
+        var plan = allPlans.FirstOrDefault(p => p.UserId == userId);
         return await _dbContext.Plans.FirstOrDefaultAsync(p => p.UserId == userId);
     }
 

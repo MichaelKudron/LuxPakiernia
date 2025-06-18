@@ -3,13 +3,13 @@ const container = document.getElementById("plan-container");
 const userId = localStorage.getItem("userId");
 
 const daysOfWeek = [
-  "Poniedziałek",
-  "Wtorek",
-  "Środa",
-  "Czwartek",
-  "Piątek",
-  "Sobota",
-  "Niedziela"
+  "poniedzialek",
+  "wtorek",
+  "sroda",
+  "czwartek",
+  "piatek",
+  "sobota",
+  "niedziela"
 ];
 
 async function loadPlan() {
