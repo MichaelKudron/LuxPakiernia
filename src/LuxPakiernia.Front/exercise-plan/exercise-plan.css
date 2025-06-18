@@ -1,80 +1,150 @@
-.main-content {
+.exercise-plan-main {
+  flex: 1;
   padding: 2rem;
-  max-width: 600px;
-  margin: 0 auto;
-  color: #fff;
+  min-height: calc(100vh - 120px);
+  background-color: var(--bg-main);
+  color: var(--text-main);
 }
 
-.form-section {
-  background-color: #181818;
-  border: 1px solid #333;
-  border-radius: 12px;
-  padding: 2rem;
-  box-shadow: 0 0 12px rgba(255, 80, 50, 0.2);
+.exercise-plan-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.exercise-plan-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 .day-selector {
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
   gap: 0.5rem;
   margin-bottom: 1.5rem;
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
 }
 
 .day-tab {
-  background-color: #2c2c2c;
-  color: #fff;
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 6px;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--bg-card);
+  border-radius: var(--radius);
   cursor: pointer;
-  transition: background-color 0.3s;
+  font-weight: 600;
+  transition: all 0.3s;
+  white-space: nowrap;
+  border: none;
+  color: var(--text-main);
 }
 
-.day-tab.active,
 .day-tab:hover {
-  background-color: #ff5522;
-  color: #000;
+  background-color: var(--accent-hover);
+  color: white;
+}
+
+.day-tab.active {
+  background-color: var(--accent);
+  color: white;
 }
 
 .exercise-form {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+  background-color: var(--bg-card);
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
 }
 
-.exercise-form label {
-  font-weight: bold;
+.form-group {
+  margin-bottom: 1rem;
 }
 
-.exercise-form input,
-.exercise-form select {
-  padding: 0.5rem;
-  border-radius: 6px;
-  border: 1px solid #555;
-  background-color: #222;
-  color: #fff;
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.form-group select,
+.form-group input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  font-family: inherit;
+  background-color: var(--bg-main);
+  color: var(--text-main);
 }
 
 .form-actions {
   display: flex;
-  justify-content: space-between;
   gap: 1rem;
+  margin-top: 1.5rem;
 }
 
 .btn {
-  padding: 0.5rem 1.5rem;
+  flex: 1;
+  padding: 0.75rem;
   border: none;
-  border-radius: 6px;
+  border-radius: var(--radius);
+  font-weight: 600;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: all 0.3s;
 }
 
-.btn.primary {
-  background-color: #ff5522;
-  color: #000;
+.btn-primary {
+  background-color: var(--accent);
+  color: white;
 }
 
-.btn:hover {
-  opacity: 0.85;
+.btn-primary:hover {
+  background-color: var(--accent-hover);
+}
+
+.btn-secondary {
+  background-color: var(--error-bg);
+  color: var(--error-text);
+}
+
+.btn-secondary:hover {
+  background-color: var(--error-hover);
+}
+
+@media (max-width: 768px) {
+  .day-selector {
+    flex-wrap: wrap;
+  }
+  
+  .exercise-form {
+    padding: 1rem;
+  }
+}
+/* Dodaj na końcu pliku */
+.success-message {
+  background-color: var(--success-bg);
+  color: var(--success-text);
+  padding: 1rem;
+  border-radius: var(--radius);
+  margin-bottom: 1rem;
+  border-left: 4px solid var(--success-text);
+  animation: fadeIn 0.3s ease-out;
+}
+
+.error-message {
+  background-color: var(--error-bg);
+  color: var(--error-text);
+  padding: 1rem;
+  border-radius: var(--radius);
+  margin-bottom: 1rem;
+  border-left: 4px solid var(--error-text);
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
