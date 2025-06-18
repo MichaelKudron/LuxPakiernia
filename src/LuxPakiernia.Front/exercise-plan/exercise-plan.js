@@ -123,7 +123,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const payload = {
         exerciseId: exerciseSelect.value,
         seriesCount: parseInt(document.getElementById("seriesCount").value),
-        repetitionCount: parseInt(document.getElementById("repetitionCount").value),
+        repetitionsCount: parseInt(document.getElementById("repetitionCount").value),
         weight: parseFloat(document.getElementById("weight").value),
         day: currentDay
       };
