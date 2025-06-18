@@ -1,5 +1,6 @@
 ﻿using LuxPakiernia.Application.Users.GetCurrentUser;
 using LuxPakiernia.Application.Users.GetUserById;
+using LuxPakiernia.Application.Users.GetUserPlanWithDetail;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -40,5 +41,11 @@ public class UserCotroller : BaseContrller
         }
 
         return Ok(result.Data);
+    }
+    [HttpGet("user/{userId}/details")]
+    public async Task<IActionResult> GetUserPlanWithDetails(Guid userId)
+    {
+        var result = await _mediator.Send(new GetUserPlanWithDetailsQuery { UserId = userId });
+        return Ok(result);
     }
 }
