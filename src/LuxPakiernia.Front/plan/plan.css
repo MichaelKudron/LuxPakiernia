@@ -1,0 +1,86 @@
+/* plan.css – styl kart z ćwiczeniami w stylu LuxPakiernia */
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #0f0f0f;
+  color: #f0f0f0;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem 1rem;
+  background-color: #0f0f0f;
+}
+
+.container {
+  width: 100%;
+  max-width: 1000px;
+  padding: 2rem;
+  background-color: #1a1a1a;
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(255, 85, 0, 0.3);
+}
+
+h1 {
+  font-size: 2.4rem;
+  margin-bottom: 1rem;
+  color: #ff5522;
+  text-align: center;
+}
+
+.exercise-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.exercise-card {
+  background: #1f1f1f;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(255, 85, 0, 0.15);
+  transition: transform 0.2s, background 0.2s;
+}
+
+.exercise-card:hover {
+  transform: scale(1.01);
+  background: #242424;
+}
+
+.exercise-card h2 {
+  color: #ff5522;
+  margin-bottom: 0.5rem;
+}
+
+.exercise-card p {
+  margin: 0.3rem 0;
+  line-height: 1.5;
+}
+
+.exercise-card strong {
+  color: #ffa15f;
+}
+
+.error {
+  color: red;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+  h1 {
+    font-size: 1.8rem;
+  }
+  .exercise-card h2 {
+    font-size: 1.2rem;
+  }
+}
