@@ -1,0 +1,208 @@
+.exercise-plan-main {
+  flex: 1;
+  padding: 2rem;
+  min-height: calc(100vh - 120px);
+  background-color: var(--bg-main);
+  color: var(--text-main);
+}
+
+.exercise-plan-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.exercise-plan-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.add-exercise-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--accent);
+  color: white;
+  border-radius: var(--radius);
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s;
+  white-space: nowrap;
+  border: none;
+  cursor: pointer;
+}
+
+.add-exercise-btn:hover {
+  background-color: var(--accent-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+
+.days-tabs {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+}
+
+.day-tab {
+  padding: 0.75rem 1.5rem;
+  background-color: var(--bg-card);
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s;
+  white-space: nowrap;
+}
+
+.day-tab:hover {
+  background-color: var(--accent-hover);
+  color: white;
+}
+
+.day-tab.active {
+  background-color: var(--accent);
+  color: white;
+}
+
+.exercises-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.exercise-item {
+  background-color: var(--bg-card);
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  position: relative;
+}
+
+.exercise-name {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+}
+
+.exercise-details {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+}
+
+.exercise-detail {
+  font-size: 0.9rem;
+}
+
+.exercise-detail span {
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.delete-exercise {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background: none;
+  border: none;
+  color: var(--error-text);
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+.add-exercise-form {
+  background-color: var(--bg-card);
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  margin-top: 1.5rem;
+  box-shadow: var(--shadow);
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.form-group select,
+.form-group input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  font-family: inherit;
+  background-color: var(--bg-main);
+  color: var(--text-main);
+}
+
+.form-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.cancel-btn,
+.confirm-btn {
+  flex: 1;
+  padding: 0.75rem;
+  border: none;
+  border-radius: var(--radius);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.cancel-btn {
+  background-color: var(--error-bg);
+  color: var(--error-text);
+}
+
+.cancel-btn:hover {
+  background-color: var(--error-hover);
+}
+
+.confirm-btn {
+  background-color: var(--accent);
+  color: white;
+}
+
+.confirm-btn:hover {
+  background-color: var(--accent-hover);
+}
+
+.no-exercises {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 2rem;
+  color: var(--text-muted);
+  font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+  .exercise-plan-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .days-tabs {
+    flex-wrap: wrap;
+  }
+  
+  .exercises-list {
+    grid-template-columns: 1fr;
+  }
+}
